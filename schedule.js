@@ -1,6 +1,22 @@
 window.onload = function(){
     loadEvents();
+    loadMobileView();
     document.addEventListener("click", handleClick);
+}
+
+var currdate = new Date();
+var currview = currdate.getUTCDate();
+var startdate;
+if (currdate.getUTCDate() < 8){
+    startdate = 1;
+} else if (currdate.getUTCDate() < 15){
+    startdate = 8;
+} else if (currdate.getUTCDate() < 22){
+    startdate = 15
+} else if (currdate.getUTCDate() < 29){
+    startdate = 22;
+} else {
+    startdate = 29;
 }
 
 function handleClick(e){
@@ -10,7 +26,22 @@ function handleClick(e){
             var url = e.target.getAttribute("data-link");
             window.open(url, "_blank");
         }
+    } else if (e.target.classList.contains("btn")){
+        changeMobileView(e.target.getAttribute("id"));
     }
+}
+
+function changeMobileView(dir){
+    if (dir === "next"){
+        if (currview !== 7){
+            currview += 1;
+        }
+    } else if (dir === "prev"){
+        if (currview !== 1){
+            currview -= 1;
+        }
+    }
+    loadMobileView();
 }
 
 function loadJSON(callback){
@@ -107,7 +138,55 @@ function buildDay(data, elem){
 
         event.appendChild(center);
 
-        elem.appendChild(event);
+        document.getElementById(elem).appendChild(event);
+    });
+}
+
+function loadMobileView(){
+    loadJSON(function(res){
+        var events;
+        var d = new Date();
+        var utc = d.getUTCDate();
+
+        // work out which weeks events to show
+        if (utc < 8){
+            events = res.week1;
+        } else if (utc < 15){
+            events = res.week2;
+        } else if (utc < 22){
+            events = res.week3;
+        } else if (utc < 29){
+            events = res.week4;
+        } else {
+            events = res.week5;
+        }
+
+        document.getElementById("mday").innerHTML = '';
+
+        // init mobile view
+        var node = document.getElementById("mheading");
+        if (currview === 1){
+            node.innerHTML = "saturday 1<span>st</span>";
+            buildDay(events.sat, "mday");
+        } else if (currview === 2){
+            node.innerHTML = "sunday 2<span>nd</span>";
+            buildDay(events.sun, "mday");
+        } else if (currview === 3){
+            node.innerHTML = "monday 3<span>rd</span>";
+            buildDay(events.mon, "mday");
+        } else if (currview === 4){
+            node.innerHTML = "tuesday 4<span>th</span>";
+            buildDay(events.tue, "mday");
+        } else if (currview === 5){
+            node.innerHTML = "wednesday 5<span>th</span>";
+            buildDay(events.wed, "mday");
+        } else if (currview === 6){
+            node.innerHTML = "thursday 6<span>th</span>";
+            buildDay(events.thur, "mday");
+        } else if (currview === 7){
+            node.innerHTML = "friday 7<span>th</span>";
+            buildDay(events.fri, "mday");
+        }
     });
 }
 
@@ -130,12 +209,13 @@ function loadEvents(){
             events = res.week5;
         }
 
-        buildDay(events.sat, document.getElementById("sat"));
-        buildDay(events.sun, document.getElementById("sun"));
-        buildDay(events.mon, document.getElementById("mon"));
-        buildDay(events.tue, document.getElementById("tue"));
-        buildDay(events.wed, document.getElementById("wed"));
-        buildDay(events.thur, document.getElementById("thur"));
-        buildDay(events.fri, document.getElementById("fri"));
+        // init desktop view
+        buildDay(events.sat, "sat");
+        buildDay(events.sun, "sun");
+        buildDay(events.mon, "mon");
+        buildDay(events.tue, "tue");
+        buildDay(events.wed, "wed");
+        buildDay(events.thur, "thur");
+        buildDay(events.fri, "fri");
     });
 }
