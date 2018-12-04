@@ -79,7 +79,7 @@ function buildDay(data, elem){
         if (eventDate < utc){
             event.classList.add("vod");
             event.setAttribute("data-link", data.events[e].vod);
-        } else if (eventHour <= utchours){
+        } else if (eventHour <= utchours && eventDate == utc){
             event.classList.add("live");
             event.setAttribute("data-link", "https://twitch.tv/yogscast");
         } else if (utchours >= eventHour - 1 && eventDate == utc){
