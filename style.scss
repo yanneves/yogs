@@ -1,0 +1,277 @@
+@font-face {
+    font-family: 'Bebas Kai';
+    src: local('Bebas Kai Regular'), local('BebasKai'),
+        url('BebasKai.woff2') format('woff2'),
+        url('BebasKai.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    background: url(https://styles.redditmedia.com/t5_2sg86/styles/backgroundImage_mxo975ew2h121.png) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Bebas Kai';
+    font-size: 16px;
+    user-select: none;
+    #title {
+        position: fixed;
+        top: 25px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background: #ffffff;
+        h1 {
+            color: #091533;
+            font-weight: normal;
+            margin: 0;
+            font-size: 3rem;
+            padding: 5px 50px;
+        }
+    }
+    #schedule {
+        position: fixed;
+        top: calc(62px + 50px);
+        width: calc(100% - 200px);
+        left: 50%;
+        transform: translate(-50%, 0);
+        height: calc(100vh - 62px - 50px - 50px);
+        max-width: 1720px;
+        #days {
+            display: flex;
+            flex-direction: row;
+            #timezone {
+                color: #ffffff;
+                height: 55px;
+                width: 55px;
+                margin: 0;
+                font-size: 1rem;
+                line-height: 99px;
+                vertical-align: bottom;
+                margin: 5px;
+            }
+            .day {
+                background: #ffffff;
+                flex-basis: 0;
+                flex-grow: 1;
+                margin: 5px 5px 0px;
+                color: #091533;
+                text-align: center;
+                font-size: 2rem;
+                padding: 10px;
+                span {
+                    vertical-align: super;
+                    font-size: 1rem;
+                }
+            }
+        }
+        #times {
+            width: 65px;
+            height: calc(100% - 10px - 55px);
+            display: flex;
+            flex-direction: column;
+            float: left;
+            padding-top: 5px;
+            .time {
+                background: #ffffff;
+                flex-basis: 0;
+                position: relative;
+                flex-grow: 1;
+                margin: 5px;
+                width: 55px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                &::before {
+                    content: attr(data-time);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    color: #a3b3d3;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) rotate(-90deg);
+                    font-size: 2.8vh;
+                }
+                p {
+                    color: #091533;
+                    margin: 0;
+                    width: 100%;
+                    text-align: center;
+                    font-size: 1.3rem;
+                    margin: 5px 0;
+                }
+            }
+        }
+        #events {
+            display: flex;
+            flex-direction: row;
+            width: calc(100% - 55px - 10px);
+            height: calc(100% - 65px);
+            float: right;
+            .day {
+                height: 100%;
+                flex-basis: 0;
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                background: #091735;
+                margin: 0 5px 5px;
+                padding-top: 5px;
+                .event {
+                    background: #2753ae;
+                    flex-basis: 0;
+                    flex-grow: 1;
+                    margin: 5px 0;
+                    box-sizing: border-box;
+                    border: 5px solid #4ea8ff;
+                    position: relative;
+                    color: #ffffff;
+                    cursor: pointer;
+                    &::before {
+                        content: '';
+                        height: 100%;
+                        width: 100%;
+                        position: absolute;
+                        background: #ffffff;
+                        top: 0;
+                        left: 0;
+                        z-index: 2;
+                        pointer-events: none;
+                        opacity: 0;
+                        transition: .2s ease-in-out;
+                    }
+                    &::after {
+                        text-align: center;
+                        top: 50%;
+                        left: 50%;
+                        opacity: 0;
+                        transform: translate(-50%, -50%) scale(0.95);
+                        color: #091533;
+                        position: absolute;
+                        font-size: 1.5rem;
+                        z-index: 3;
+                        transition: .2s ease-in-out;
+                    }
+                    &.upcoming::after {
+                        content: "stream has not begun";
+                    }
+                    &.live::after {
+                        content: "watch live";
+                    }
+                    &.soon::after {
+                        content: "starting soon";
+                    }
+                    &.vod::after {
+                        content: "watch vod";
+                    }
+                    &:hover::before {
+                        opacity: 1;
+                    }
+                    &:hover::after {
+                        opacity: 1;
+                        transform: translate(-50%, -50%) scale(1);
+                    }
+                    &.upcoming {
+                        cursor: no-drop;
+                    }
+                    &.double {
+                        flex-grow: 2;
+                        padding: 10px 0;
+                        position: relative;
+                    }
+                    &.split {
+                        h2::before {
+                            height: 4px;
+                            width: 100%;
+                            background: #4ea8ff;
+                            position: relative;
+                            display: block;
+                            content: '';
+                            top: 0;
+                            left: 50%;
+                            transform: translate(-50%, 0);
+                            margin-bottom: 10px;
+                        }
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    .center {
+                        position: absolute;
+                        top: 50%;
+                        width: 100%;
+                        transform: translate(0, -50%);
+                        pointer-events: none;
+                        h1 {
+                            font-weight: normal;
+                            width: 100%;
+                            text-align: center;
+                            margin: 0;
+                            color: inherit;
+                            font-size: 2rem;
+                            box-sizing: border-box;
+                            padding: 0 15px;
+                            pointer-events: none;
+                        }
+                        h2 {
+                            font-weight: normal;
+                            width: 100%;
+                            text-align: center;
+                            margin: 0;
+                            color: inherit;
+                            font-size: 1.5rem;
+                            padding: 0 15px;
+                            box-sizing: border-box;
+                            margin-top: 10px;
+                            pointer-events: none;
+                        }
+                        h3 {
+                            font-size: 1rem;
+                            font-weight: normal;
+                            width: 100%;
+                            text-align: center;
+                            color: inherit;
+                            margin: 0;
+                            pointer-events: none;
+                        }
+                    }
+                    &.pink {
+                        background: #fa0057;
+                    }
+                    &.yellow {
+                        background: #fdd700;
+                        color: #00246b;
+                    }
+                    &.dark {
+                        background: #0c1d44;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1820px){
+    #schedule {
+        #events {
+            .day {
+                .event {
+                    h1 {
+                        font-size: 1.9rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1224px){
+    #schedule {
+        display: none;
+    }
+}

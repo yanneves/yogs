@@ -1,0 +1,185 @@
+{
+    "week1": {
+        "sat": {
+            "date": 1,
+            "events": [
+                {
+                    "title": "office cam",
+                    "subtitle": "decorating\nthe office",
+                    "startHour": 11,
+                    "vod": "https://www.twitch.tv/videos/343083579?t=00h09m38s"
+                },
+                {
+                    "title": "jingle\njam warmup",
+                    "subtitle": "turps and\nzylus",
+                    "type": "pink",
+                    "startHour": 14,
+                    "vod": "https://www.twitch.tv/videos/343083579?t=03h10m35s"
+                },
+                {
+                    "title": "jingle cats",
+                    "subtitle": "bundle opens\nlewis and\nsimon",
+                    "type": "yellow",
+                    "startHour": 17,
+                    "vod": "https://www.twitch.tv/videos/343083579?t=06h09m27s"
+                },
+                {
+                    "title": "trains and\nchill",
+                    "subtitle": "lewis, sjin,\nduncan, tom",
+                    "type": "pink",
+                    "startHour": 20,
+                    "vod": "https://www.twitch.tv/videos/343083579?t=10h22m10s"
+                }
+            ]
+        },
+        "sun": {
+            "date": 2,
+            "events": [
+                {
+                    "title": "stocking\nstuffers",
+                    "subtitle": "jingle jam\ngames daily!",
+                    "startHour": 11,
+                    "vod": "https://www.twitch.tv/videos/343590668?t=00h12m40s"
+                },
+                {
+                    "title": "christmas\nworld building",
+                    "subtitle": "tom, lewis,\nsjin and barry",
+                    "info": "(role playing)",
+                    "type": "dark",
+                    "startHour": 14,
+                    "vod": "https://www.twitch.tv/videos/343590668?t=03h22m50s"
+                },
+                {
+                    "title": "highrollers\naerois xmas",
+                    "subtitle": "with matthew\nmercer",
+                    "type": "pink",
+                    "startHour": 17,
+                    "vod": "https://www.twitch.tv/videos/343590668?t=06h26m24s"
+                },
+                {
+                    "title": "protessional\nstrem",
+                    "subtitle": "zylus, nilesy,\nravs and panda",
+                    "type": "dark",
+                    "startHour": 20,
+                    "vod": "https://www.twitch.tv/videos/343796438?t=00h06m31s"
+                }
+            ]
+        },
+        "mon": {
+            "date": 3,
+            "events": [
+                {
+                    "title": "stocking\nstuffers",
+                    "subtitle": "jingle jam\ngames daily!",
+                    "startHour": 11,
+                    "vod": "https://www.twitch.tv/videos/344041583?t=00h50m01s"
+                },
+                {
+                    "title": "irl bristol",
+                    "subtitle": "turps and lewis",
+                    "info": "christmas market",
+                    "type": "pink",
+                    "startHour": 14,
+                    "vod": "https://www.twitch.tv/videos/344041583?t=03h59m12s"
+                },
+                {
+                    "title": "feed a cow\nfor christmas",
+                    "subtitle": "farming sim\nduncan, sjin\nand lewis",
+                    "type": "yellow double",
+                    "startHour": 17,
+                    "vod": "https://www.twitch.tv/videos/344041583?t=06h55m11s"
+                }
+            ]
+        },
+        "tue": {
+            "date": 4,
+            "events": [
+                {
+                    "title": "stocking\nstuffers",
+                    "subtitle": "jingle jam\ngames daily!",
+                    "startHour": 11
+                },
+                {
+                    "title": "mmo bros",
+                    "subtitle": "turps and\nsimon",
+                    "type": "dark",
+                    "startHour": 14
+                },
+                {
+                    "title": "making a\nchristmas\nalbum live",
+                    "subtitle": "hat films",
+                    "type": "pink double",
+                    "startHour": 17
+                }
+            ]
+        },
+        "wed": {
+            "date": 5,
+            "events": [
+                {
+                    "title": "cooking\non the boat",
+                    "subtitle": "featuring",
+                    "extra": "great british\nbake off\ncontestent\nbriony",
+                    "type": "dark double split",
+                    "startHour": 11
+                },
+                {
+                    "title": "civ 5 live",
+                    "subtitle": "lewis, sjin,\nduncan, ben,\nrythian and\ndaltos",
+                    "type": "yellow double",
+                    "startHour": 17
+                }
+            ]
+        },
+        "thur": {
+            "date": 6,
+            "events": [
+                {
+                    "title": "stocking\nstuffers",
+                    "subtitle": "jingle jam\ngames daily!",
+                    "startHour": 11
+                },
+                {
+                    "title": "lego builds",
+                    "subtitle": "with tom,\nturps and\nsimon!",
+                    "type": "dark",
+                    "startHour": 14
+                },
+                {
+                    "title": "karaoke",
+                    "subtitle": "turps and\nfriends!",
+                    "subtitle2": "(live band)",
+                    "type": "pink double",
+                    "startHour": 17
+                }
+            ]
+        },
+        "fri": {
+            "date": 7,
+            "events": [
+                {
+                    "title": "stocking\nstuffers",
+                    "subtitle": "jingle jam\ngames daily!",
+                    "startHour": 11
+                },
+                {
+                    "title": "vidiots",
+                    "subtitle": "worst games\never",
+                    "type": "dark",
+                    "startHour": 14
+                },
+                {
+                    "title": "chilluminati",
+                    "subtitle": "christmas nativity",
+                    "subtitle2": "tom, simon,\nsjin and barry",
+                    "type": "yellow",
+                    "startHour": 17
+                },
+                {
+                    "title": "rainbow\nsix siege\ninhouse",
+                    "startHour": 20
+                }
+            ]
+        }
+    }
+}
