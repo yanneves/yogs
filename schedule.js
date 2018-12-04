@@ -1,10 +1,12 @@
+var currdate = new Date();
+var timezoneOffset = currdate.getTimezoneOffset() / 2;
+
 window.onload = function(){
     loadEvents();
     loadMobileView();
     document.addEventListener("click", handleClick);
 }
 
-var currdate = new Date();
 var currview = currdate.getUTCDate();
 var startdate;
 if (currdate.getUTCDate() < 8){
@@ -208,6 +210,11 @@ function loadEvents(){
         } else {
             events = res.week5;
         }
+
+        // set times
+        var morningStart = new Date();
+
+        
 
         // init desktop view
         buildDay(events.sat, "sat");

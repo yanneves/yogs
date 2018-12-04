@@ -6,13 +6,20 @@
 }
 body {
   margin: 0;
-  background: url(https://styles.redditmedia.com/t5_2sg86/styles/backgroundImage_mxo975ew2h121.png) no-repeat center center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url(https://styles.redditmedia.com/t5_2sg86/styles/backgroundImage_mxo975ew2h121.png);
   background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
   height: 100vh;
   width: 100%;
   font-family: "Bebas Kai";
   font-size: 16px;
   user-select: none;
+  overflow: hidden;
 }
 body #title {
   position: fixed;
