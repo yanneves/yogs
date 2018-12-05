@@ -1,5 +1,8 @@
 {
     "week1": {
+        "meta": {
+            "active": true
+        },
         "sat": {
             "date": 1,
             "events": [
@@ -7,28 +10,44 @@
                     "title": "office cam",
                     "subtitle": "decorating\nthe office",
                     "startHour": 11,
-                    "vod": "https://www.twitch.tv/videos/343083579?t=00h09m38s"
+                    "vod": "https://www.twitch.tv/videos/343083579?t=00h09m38s",
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/343083579?t=00h09m38s",
+                        "youtube": "https://www.youtube.com/watch?v=xsbp6ZFgT_s"
+                    }
                 },
                 {
                     "title": "jingle\njam warmup",
                     "subtitle": "turps and\nzylus",
                     "type": "pink",
                     "startHour": 14,
-                    "vod": "https://www.twitch.tv/videos/343083579?t=03h10m35s"
+                    "vod": "https://www.twitch.tv/videos/343083579?t=03h10m35s",
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/343083579?t=03h10m35s",
+                        "youtube": "https://www.youtube.com/watch?v=puqaSskA1EA"
+                    }
                 },
                 {
                     "title": "jingle cats",
                     "subtitle": "bundle opens\nlewis and\nsimon",
                     "type": "yellow",
                     "startHour": 17,
-                    "vod": "https://www.twitch.tv/videos/343083579?t=06h09m27s"
+                    "vod": "https://www.twitch.tv/videos/343083579?t=06h09m27s",
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/343083579?t=06h09m27s",
+                        "youtube": "https://www.youtube.com/watch?v=zF5IbpO4BqI"
+                    }
                 },
                 {
                     "title": "trains and\nchill",
                     "subtitle": "lewis, sjin,\nduncan, tom",
                     "type": "pink",
                     "startHour": 20,
-                    "vod": "https://www.twitch.tv/videos/343083579?t=10h22m10s"
+                    "vod": "https://www.twitch.tv/videos/343083579?t=10h22m10s",
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/343083579?t=10h22m10s",
+                        "youtube": "https://www.youtube.com/watch?v=fHgDIchxJGA"
+                    }
                 }
             ]
         },
@@ -39,7 +58,10 @@
                     "title": "stocking\nstuffers",
                     "subtitle": "jingle jam\ngames daily!",
                     "startHour": 11,
-                    "vod": "https://www.twitch.tv/videos/343590668?t=00h12m40s"
+                    "vod": "https://www.twitch.tv/videos/343590668?t=00h12m40s",
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/343590668?t=00h12m40s"
+                    }
                 },
                 {
                     "title": "christmas\nworld building",
@@ -47,21 +69,30 @@
                     "info": "(role playing)",
                     "type": "dark",
                     "startHour": 14,
-                    "vod": "https://www.twitch.tv/videos/343590668?t=03h22m50s"
+                    "vod": "https://www.twitch.tv/videos/343590668?t=03h22m50s",
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/343590668?t=03h22m50s"
+                    }
                 },
                 {
                     "title": "highrollers\naerois xmas",
                     "subtitle": "with matthew\nmercer",
                     "type": "pink",
                     "startHour": 17,
-                    "vod": "https://www.twitch.tv/videos/343590668?t=06h26m24s"
+                    "vod": "https://www.twitch.tv/videos/343590668?t=06h26m24s",
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/343590668?t=06h26m24s"
+                    }
                 },
                 {
                     "title": "protessional\nstrem",
                     "subtitle": "zylus, nilesy,\nravs and panda",
                     "type": "dark",
                     "startHour": 20,
-                    "vod": "https://www.twitch.tv/videos/343796438?t=00h06m31s"
+                    "vod": "https://www.twitch.tv/videos/343796438?t=00h06m31s",
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/343796438?t=00h06m31s"
+                    }
                 }
             ]
         },
@@ -72,7 +103,10 @@
                     "title": "stocking\nstuffers",
                     "subtitle": "jingle jam\ngames daily!",
                     "startHour": 11,
-                    "vod": "https://www.twitch.tv/videos/344041583?t=00h50m01s"
+                    "vod": "https://www.twitch.tv/videos/344041583?t=00h50m01s",
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/344041583?t=00h50m01s"
+                    }
                 },
                 {
                     "title": "irl bristol",
@@ -80,14 +114,20 @@
                     "info": "christmas market",
                     "type": "pink",
                     "startHour": 14,
-                    "vod": "https://www.twitch.tv/videos/344041583?t=03h59m12s"
+                    "vod": "https://www.twitch.tv/videos/344041583?t=03h59m12s",
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/344041583?t=03h59m12s"
+                    }
                 },
                 {
                     "title": "feed a cow\nfor christmas",
                     "subtitle": "farming sim\nduncan, sjin\nand lewis",
                     "type": "yellow double",
                     "startHour": 17,
-                    "vod": "https://www.twitch.tv/videos/344041583?t=06h55m11s"
+                    "vod": "https://www.twitch.tv/videos/344041583?t=06h55m11s",
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/344041583?t=06h55m11s"
+                    }
                 }
             ]
         },
@@ -97,19 +137,31 @@
                 {
                     "title": "stocking\nstuffers",
                     "subtitle": "jingle jam\ngames daily!",
-                    "startHour": 11
+                    "startHour": 11,
+                    "vod": "https://www.twitch.tv/videos/344467593?t=00h30m14s",
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/344467593?t=00h30m14s"
+                    }
                 },
                 {
                     "title": "mmo bros",
                     "subtitle": "turps and\nsimon",
                     "type": "dark",
-                    "startHour": 14
+                    "startHour": 14,
+                    "vod": "https://www.twitch.tv/videos/344467593?t=03h33m03s",
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/344467593?t=03h33m03s"
+                    }
                 },
                 {
                     "title": "making a\nchristmas\nalbum live",
                     "subtitle": "hat films",
                     "type": "pink double",
-                    "startHour": 17
+                    "startHour": 17,
+                    "vod": "https://www.twitch.tv/videos/344467593?t=06h51m29s",
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/344467593?t=06h51m29s"
+                    }
                 }
             ]
         },
@@ -181,5 +233,97 @@
                 }
             ]
         }
-    }
+    },
+    "week2": {
+        "meta": {
+            "active": false
+        },
+        "sat": {
+
+        },
+        "sun": {
+            
+        },
+        "mon": {
+
+        },
+        "tue": {
+            
+        },
+        "wed": {
+
+        },
+        "thur": {
+
+        },
+        "fri": {
+
+        }
+    },
+    "week3": {
+        "meta": {
+            "active": false
+        },
+        "sat": {
+
+        },
+        "sun": {
+            
+        },
+        "mon": {
+
+        },
+        "tue": {
+            
+        },
+        "wed": {
+
+        },
+        "thur": {
+
+        },
+        "fri": {
+            
+        }
+    },
+    "week4": {
+        "meta": {
+            "active": false
+        },
+        "sat": {
+
+        },
+        "sun": {
+            
+        },
+        "mon": {
+
+        },
+        "tue": {
+            
+        },
+        "wed": {
+
+        },
+        "thur": {
+
+        },
+        "fri": {
+            
+        }
+    },
+    "week5": {
+        "meta": {
+            "active": false
+        },
+        "sat": {
+
+        },
+        "sun": {
+            
+        },
+        "mon": {
+
+        }
+    }   
 }

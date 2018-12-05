@@ -6,82 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jingle Jam 2018 Schedule - Yogscast</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css">
-    <link href="./style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/brands.css" integrity="sha384-QT2Z8ljl3UupqMtQNmPyhSPO/d5qbrzWmFxJqmY7tqoTuT2YrQLEqzvVOP2cT5XW" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT" crossorigin="anonymous">
+    <link href="./assets/css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <section id="title">
-        <h1>jingle jam 2018 schedule</h1>
+    <section id="title"><h1>jingle jam 2018 schedule</h1></section>
+    <section id="schedule">
+
+        <div class="header time"></div>
+
+        <div class="header dayone"></div>
+        <div class="header daytwo"></div>
+        <div class="header daythree"></div>
+        <div class="header dayfour"></div>
+        <div class="header dayfive"></div>
+        <div class="header daysix"></div>
+        <div class="header dayseven"></div>
+
+        <div class="time morning" data-label="morning"></div>
+        <div class="time afternoon" data-label="afternoon"></div>
+        <div class="time evening" data-label="evening"></div>
+        <div class="time night" data-label="night"></div>
     </section>
-    <section id="schedule" class="desktop">
-        <article id="days">
-            <p id="timezone">times gmt</p>
-            <div class="day">Saturday 1<span>st</span></div>
-            <div class="day">Sunday 2<span>nd</span></div>
-            <div class="day">Monday 3<span>rd</span></div>
-            <div class="day">Tuesday 4<span>th</span></div>
-            <div class="day">Wednesday 5<span>th</span></div>
-            <div class="day">Thursday 6<span>th</span></div>
-            <div class="day">Friday 7<span>th</span></div>
-        </article>
-        <article id="times">
-            <div class="time" data-time="morning" id="morning">
-                <p>11:00</p>
-                <p>14:00</p>
-            </div>
-            <div class="time" data-time="afternoon" id="afternoon">
-                <p>14:00</p>
-                <p>17:00</p>
-            </div>
-            <div class="time" data-time="evening" id="evening">
-                <p>17:00</p>
-                <p>20:00</p>
-            </div>
-            <div class="time" data-time="night" id="night">
-                <p>20:00</p>
-                <p>23:00</p>
-            </div>
-        </article>
-        <article id="events">
-            <div class="day" id="sat"></div>
-            <div class="day" id="sun"></div>
-            <div class="day" id="mon"></div>
-            <div class="day" id="tue"></div>
-            <div class="day" id="wed"></div>
-            <div class="day" id="thur"></div>
-            <div class="day" id="fri"></div>
-        </article>
-    </section>
-    <section id="schedule" class="mobile">
-        <article id="controls">
-            <div class="btn" id="prev">prev</div>
-            <div class="btn" id="next">next</div>
-        </article>
-            <article id="days">
-                <p id="timezone">times gmt</p>
-                <div class="day" id="mheading"></div>
-            </article>
-            <article id="times">
-                <div class="time" data-time="morning">
-                    <p>11:00</p>
-                    <p>14:00</p>
-                </div>
-                <div class="time" data-time="afternoon">
-                    <p>14:00</p>
-                    <p>17:00</p>
-                </div>
-                <div class="time" data-time="evening">
-                    <p>17:00</p>
-                    <p>20:00</p>
-                </div>
-                <div class="time" data-time="night">
-                    <p>20:00</p>
-                    <p>23:00</p>
-                </div>
-            </article>
-            <article id="events">
-                <div class="day" id="mday"></div>
-            </article>
-        </section>
-    <script defer src="./schedule.js"></script>
+
+    <script src="./assets/js/schedule.js"></script>
 </body>
 </html>
