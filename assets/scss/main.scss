@@ -1,0 +1,538 @@
+@font-face {
+    font-family: 'Bebas Kai';
+    src: local('Bebas Kai Regular'), local('BebasKai'),
+        url('../fonts/BebasKai.woff2') format('woff2'),
+        url('../fonts/BebasKai.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: 'Bebas Kai';
+    background: url(../img/background.png) no-repeat center center;
+    background-size: cover;
+    font-size: 16px;
+    width: 100%;
+    height: 100vh;
+    #title {
+        position: fixed;
+        top: 25px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background: #ffffff;
+        white-space: nowrap;
+        h1 {
+            color: #091533;
+            font-weight: normal;
+            margin: 0;
+            font-size: 3rem;
+            padding: 5px 50px;
+        }
+    }
+    #schedule {
+        position: fixed;
+        top: 112px;
+        width: calc(100% - 200px);
+        max-width: calc(100% - 200px);
+        height: calc(100vh - 62px - 50px - 50px);
+        max-height: calc(100vh - 62px - 50px - 50px);
+        left: 50%;
+        transform: translate(-50%, 0);
+        display: grid;
+        grid-template-columns: 55px repeat(7, 1fr);
+        grid-template-rows: 55px repeat(4, 1fr);
+        grid-gap: 10px;
+        .time {
+            grid-column: 1;
+            background: #ffffff;
+            color: #091533;
+            &.morning, &.afternoon, &.evening, &.night {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                position: relative;
+                p {
+                    margin: 5px 0;
+                    font-size: 1.3rem;
+                    text-align: center;
+                }
+                &::before {
+                    position: absolute;
+                    color: #a3b3d3;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) rotate(-90deg);
+                    font-size: 2.8vh;
+                    content: attr(data-label);
+                }
+            }
+        }
+        .header {
+            grid-row: 1;
+            background: #ffffff;
+            color: #091533;
+            font-size: 2rem;
+            line-height: 45px;
+            vertical-align: middle;
+            text-align: center;
+            span {
+                vertical-align: super;
+                font-size: 1rem;
+            }
+            &.time {
+                background: transparent;
+                color: #ffffff;
+                font-size: 1rem;
+                line-height: 99px;
+                vertical-align: bottom;
+            }
+        }
+        .morning:not(.time), .afternoon:not(.time), .evening:not(.time), .night:not(.time){
+            background: #2753ae;
+            box-sizing: border-box;
+            border: 5px solid #4ea8ff;
+            position: relative;
+            color: #ffffff;
+            cursor: pointer;
+            &.upcoming {
+                cursor: no-drop;
+            }
+            &.split {
+                h2::before {
+                    height: 4px;
+                    width: 100%;
+                    background: #4ea8ff;
+                    position: relative;
+                    display: block;
+                    content: '';
+                    top: 0;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    margin-bottom: 10px;
+                }
+            }
+            .center {
+                position: relative;
+                top: 50%;
+                width: 100%;
+                transform: translate(0, -50%);
+                pointer-events: none;
+                padding: 5px 0;
+                h1 {
+                    font-weight: normal;
+                    width: 100%;
+                    text-align: center;
+                    margin: 0;
+                    color: inherit;
+                    font-size: 2rem;
+                    box-sizing: border-box;
+                    padding: 0 15px;
+                    pointer-events: none;
+                }
+                h2 {
+                    font-weight: normal;
+                    width: 100%;
+                    text-align: center;
+                    margin: 0;
+                    color: inherit;
+                    font-size: 1.5rem;
+                    padding: 0 15px;
+                    box-sizing: border-box;
+                    margin-top: 10px;
+                    pointer-events: none;
+                }
+                h3 {
+                    font-size: 1rem;
+                    font-weight: normal;
+                    width: 100%;
+                    text-align: center;
+                    color: inherit;
+                    margin: 0;
+                    pointer-events: none;
+                }
+            }
+            .vods {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: #ffffff;
+                z-index: 5;
+                color: #000000;
+                opacity: 0;
+                pointer-events: none;
+                transition: .2s ease-in-out;
+                .vodc {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: #091533;
+                    text-align: center;
+                    h1 {
+                        font-size: 1.5rem;
+                        margin: 0;
+                        font-weight: normal;
+                        margin-bottom: 5px;
+                    }
+                    a {
+                        text-decoration: none;
+                    }
+                    i {
+                        font-size: 2rem;
+                        line-height: 32px;
+                        vertical-align: middle;
+                        margin: 0 5px;
+                        color: #091533;
+                        transition: .2s ease-in-out;
+                        &:hover {
+                            &.fa-twitch {
+                                color: #4b367c;
+                            }
+                            &.fa-youtube {
+                                color: #FF0000;
+                            }
+                        }
+                    }
+                }
+            }
+            &:hover {
+                .vods {
+                    opacity: 1;
+                    pointer-events: auto;
+                }
+            }
+            &.pink {
+                background: #fa0057;
+            }
+            &.yellow {
+                background: #fdd700;
+                color: #00246b;
+            }
+            &.dark {
+                background: #0c1d44;
+            }
+        }
+        .morning {
+            grid-row: 2;
+        }
+        .afternoon {
+            grid-row: 3;
+        }
+        .evening {
+            grid-row: 4;
+        }
+        .night {
+            grid-row: 5;
+        }
+        .dayone {
+            grid-column: 2;
+        }
+        .daytwo {
+            grid-column: 3;
+        }
+        .double {
+            grid-row-end: span 2;
+        }
+    }
+}
+
+@media only screen and (max-width: 1820px){
+    body #schedule {
+        .morning:not(.time), .afternoon:not(.time), .evening:not(.time), .night:not(.time){
+            .center {
+                h1 {
+                    font-size: 1.9rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1755px){
+    body #schedule {
+        .morning:not(.time), .afternoon:not(.time), .evening:not(.time), .night:not(.time){
+            .center {
+                h1 {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1710px){
+    body #schedule {
+        .morning:not(.time), .afternoon:not(.time), .evening:not(.time), .night:not(.time){
+            .center {
+                h1 {
+                    font-size: 1.7rem;
+                }
+                h2 {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1640px){
+    body #schedule {
+        .morning:not(.time), .afternoon:not(.time), .evening:not(.time), .night:not(.time){
+            .center {
+                h1 {
+                    font-size: 1.6rem;
+                }
+                h2 {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1575px){
+    body #schedule {
+        .morning:not(.time), .afternoon:not(.time), .evening:not(.time), .night:not(.time){
+            .center {
+                h1 {
+                    font-size: 1.5rem;
+                }
+                h2 {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1550px){
+    body #schedule {
+        .header:not(.time){
+            font-size: 1.9rem;
+            span {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1515px){
+    body #schedule {
+        .morning:not(.time), .afternoon:not(.time), .evening:not(.time), .night:not(.time){
+            .center {
+                h1 {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1490px){
+    body #schedule {
+        .header:not(.time){
+            font-size: 1.8rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 1455px){
+    body #schedule {
+        .morning:not(.time), .afternoon:not(.time), .evening:not(.time), .night:not(.time){
+            .center {
+                h1 {
+                    font-size: 1.3rem;
+                }
+                h2 {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1440px){
+    body #schedule {
+        .header:not(.time){
+            font-size: 1.7rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 1420px){
+    body #schedule {
+        .morning:not(.time), .afternoon:not(.time), .evening:not(.time), .night:not(.time){
+            .center {
+                h2 {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1395px){
+    body #schedule {
+        .morning:not(.time), .afternoon:not(.time), .evening:not(.time), .night:not(.time){
+            .center {
+                h1 {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        .header:not(.time){
+            font-size: 1.6rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 1345px){
+    body #schedule {
+        .morning:not(.time), .afternoon:not(.time), .evening:not(.time), .night:not(.time){
+            .center {
+                h1 {
+                    font-size: 1.1rem;
+                }
+                h2 {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+        .header:not(.time){
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 1295px){
+    body #schedule {
+        .header:not(.time){
+            font-size: 1.4rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 1275px){
+    body #schedule {
+        .morning:not(.time), .afternoon:not(.time), .evening:not(.time), .night:not(.time){
+            .center {
+                h1 {
+                    font-size: 1rem;
+                }
+                h2 {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}
+
+// switch to mobile view at 1250px
+@media only screen and (max-width: 1250px){
+    body {
+        #schedule {
+            width: calc(100% - 100px);
+            max-width: calc(100% - 100px);
+            height: auto;
+            grid-template-columns: 55px repeat(1, 1fr);
+            grid-template-rows: 55px repeat(4, auto);
+            max-height: calc(100vh - 65px - 25px - 22px);
+            box-sizing: border-box;
+            padding-bottom: 50px;
+            overflow: scroll;
+            .time {
+                min-height: calc((100vh - 100px) / 4);
+            }
+            .header {
+                grid-row: 1;
+                background: #ffffff;
+                color: #091533;
+                font-size: 2rem;
+                line-height: 45px;
+                vertical-align: middle;
+                text-align: center;
+                position: sticky;
+                top: 0;
+                span {
+                    vertical-align: super;
+                    font-size: 1rem;
+                }
+                &.time {
+                    background: #ffffff;
+                    color: #091533;
+                    font-size: 1rem;
+                    vertical-align: middle;
+                    min-height: auto;
+                    line-height: 55px;
+                }
+            }
+            .dayone, .daytwo, .daythree, .dayfour, .dayfive, .daysix, .dayseven {
+                display: none;
+            }
+            .active {
+                display: block;
+            }
+            .morning:not(.time), .afternoon:not(.time), .evening:not(.time), .night:not(.time){
+                .center {
+                    position: relative;
+                    h1 {
+                        font-size: 2rem;
+                    }
+                    h2 {
+                        font-size: 1.5rem;
+                    }
+                    h3 {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 620px){
+    body {
+        #title {
+            width: calc(100% - 100px);
+            height: 65px;
+            h1 {
+                padding: 0;
+                text-align: center;
+                line-height: 65px;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 580px){
+    body {
+        #title {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 420px){
+    body {
+        #title {
+            h1 {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 350px){
+    body {
+        #schedule {
+            max-width: calc(100% - 20px);
+            width: calc(100% - 20px);
+        }
+    }
+}
