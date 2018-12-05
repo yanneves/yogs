@@ -112,6 +112,7 @@ function buildDay(data, day){
 
                 twitch.setAttribute("href", data.events[e].vods.twitch);
                 twitch.setAttribute("target", "_blank");
+                twitch.setAttribute("title", "Watch on twitch");
 
                 twitch.appendChild(twitchIcon);
                 vodc.appendChild(twitch);
@@ -126,6 +127,7 @@ function buildDay(data, day){
 
                 youtube.setAttribute("href", data.events[e].vods.youtube);
                 youtube.setAttribute("target", "_blank");
+                youtube.setAttribute("title", "Watch on YouTube");
 
                 youtube.appendChild(youtubeIcon);
                 vodc.appendChild(youtube);
@@ -140,6 +142,7 @@ function buildDay(data, day){
 
                 madcat.setAttribute("href", data.events[e].vods.madcat);
                 madcat.setAttribute("target", "_blank");
+                madcat.setAttribute("title", "Watch recap");
 
                 madcat.appendChild(madcatIcon);
                 vodc.appendChild(madcat);
@@ -167,6 +170,7 @@ function buildDay(data, day){
 
                 twitch.setAttribute("href", "https://twitch.tv/yogscast");
                 twitch.setAttribute("target", "_blank");
+                twitch.setAttribute("title", "Watch live");
 
                 twitch.appendChild(twitchIcon);
                 vodc.appendChild(twitch);
@@ -183,6 +187,7 @@ function buildDay(data, day){
 
                 twitch.setAttribute("href", "https://twitch.tv/yogscast");
                 twitch.setAttribute("target", "_blank");
+                twitch.setAttribute("title", "Watch live");
 
                 twitch.appendChild(twitchIcon);
                 vodc.appendChild(twitch);
@@ -199,6 +204,7 @@ function buildDay(data, day){
 
                 twitch.setAttribute("href", "https://twitch.tv/yogscast");
                 twitch.setAttribute("target", "_blank");
+                twitch.setAttribute("title", "Watch live");
 
                 twitch.appendChild(twitchIcon);
                 vodc.appendChild(twitch);

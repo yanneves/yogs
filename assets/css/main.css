@@ -93,7 +93,6 @@ body #schedule .morning:not(.time), body #schedule .afternoon:not(.time), body #
   border: 5px solid #4ea8ff;
   position: relative;
   color: #ffffff;
-  cursor: pointer;
 }
 body #schedule .morning:not(.time).upcoming, body #schedule .afternoon:not(.time).upcoming, body #schedule .evening:not(.time).upcoming, body #schedule .night:not(.time).upcoming {
   cursor: no-drop;
