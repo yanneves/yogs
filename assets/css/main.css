@@ -164,7 +164,7 @@ body #schedule .morning:not(.time) .vods, body #schedule .afternoon:not(.time) .
   transition: 0.2s ease-in-out;
 }
 body #schedule .morning:not(.time) .vods .vodc, body #schedule .afternoon:not(.time) .vods .vodc, body #schedule .evening:not(.time) .vods .vodc, body #schedule .night:not(.time) .vods .vodc {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -193,6 +193,9 @@ body #schedule .morning:not(.time) .vods .vodc i:hover.fa-twitch, body #schedule
 }
 body #schedule .morning:not(.time) .vods .vodc i:hover.fa-youtube, body #schedule .afternoon:not(.time) .vods .vodc i:hover.fa-youtube, body #schedule .evening:not(.time) .vods .vodc i:hover.fa-youtube, body #schedule .night:not(.time) .vods .vodc i:hover.fa-youtube {
   color: #FF0000;
+}
+body #schedule .morning:not(.time) .vods .vodc i:hover.fa-paw, body #schedule .afternoon:not(.time) .vods .vodc i:hover.fa-paw, body #schedule .evening:not(.time) .vods .vodc i:hover.fa-paw, body #schedule .night:not(.time) .vods .vodc i:hover.fa-paw {
+  color: #FC6600;
 }
 body #schedule .morning:not(.time):hover .vods, body #schedule .afternoon:not(.time):hover .vods, body #schedule .evening:not(.time):hover .vods, body #schedule .night:not(.time):hover .vods {
   opacity: 1;

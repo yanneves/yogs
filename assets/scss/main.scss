@@ -165,7 +165,7 @@ body {
                 pointer-events: none;
                 transition: .2s ease-in-out;
                 .vodc {
-                    position: absolute;
+                    position: relative;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
@@ -193,6 +193,9 @@ body {
                             }
                             &.fa-youtube {
                                 color: #FF0000;
+                            }
+                            &.fa-paw {
+                                color: #FC6600;
                             }
                         }
                     }

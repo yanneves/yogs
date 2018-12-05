@@ -131,6 +131,20 @@ function buildDay(data, day){
                 vodc.appendChild(youtube);
             }
 
+            if (data.events[e].vods.madcat !== undefined && data.events[e].vods.madcat !== ""){
+                var madcat = document.createElement("a");
+                var madcatIcon = document.createElement("i");
+
+                madcatIcon.classList.add("fas");
+                madcatIcon.classList.add("fa-paw");
+
+                madcat.setAttribute("href", data.events[e].vods.madcat);
+                madcat.setAttribute("target", "_blank");
+
+                madcat.appendChild(madcatIcon);
+                vodc.appendChild(madcat);
+            }
+
             vods.appendChild(vodc);
 
             event.appendChild(vods);
