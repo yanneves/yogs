@@ -60,7 +60,8 @@
                     "startHour": 11,
                     "vod": "https://www.twitch.tv/videos/343590668?t=00h12m40s",
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/343590668?t=00h12m40s"
+                        "twitch": "https://www.twitch.tv/videos/343590668?t=00h12m40s",
+                        "youtube": "https://www.youtube.com/watch?v=jzrsZzRbqhA"
                     }
                 },
                 {
