@@ -6,10 +6,101 @@ var currDay;
 window.onload = function(){
     loadJSON(function(res){
         data = res;
+
+        var today = d.getDate();
+        if (today < 8){
+            weekStart = 1;
+        } else if (today < 15){
+             weekStart = 8;
+        } else if (today < 22){
+            weekStart = 15;
+        } else if (today < 29){
+            weekStart = 22;
+        } else {
+            weekStart = 29;
+        }
+
+        loadTimezone();
+        loadAxis();
+        loadSchedule();
+
+        document.getElementById("prevWeek").addEventListener('click', prevWeek);
+        document.getElementById("nextWeek").addEventListener('click', nextWeek);
+        document.getElementById("prevDay").addEventListener('click', prevDay);
+        document.getElementById("nextDay").addEventListener('click', nextDay);
     });
-    loadTimezone();
-    loadSchedule();
-    loadAxis();
+}
+
+function clearActive(callback){
+    var activeElems = document.getElementsByClassName(`day${["one","two","three","four","five","six","seven"][currDay]}`);
+    for (var i = 0; i < activeElems.length; i++){
+        activeElems[i].classList.remove("active");
+    }
+    callback();
+}
+
+function prevDay(){
+    if (currDay !== 0){
+        clearActive(() => {
+            currDay -= 1;
+            loadMobile();
+        });
+    } else if (currDay === 0 && weekStart !== 1){
+        var weekNo = parseInt(((weekStart - 1) / 7) + 1);
+        if (data["week"+parseInt(weekNo - 1)].meta.active){
+            clearActive(() => {
+                currDay = 6;
+                prevWeek();
+            });
+        }
+    }
+}
+
+function nextDay(){
+    if (currDay !== 6){
+        clearActive(() => {
+            currDay += 1;
+            loadMobile();
+        });
+    } else if (currDay === 6 && weekStart !== 29){
+        var weekNo = parseInt(((weekStart - 1) / 7) + 1);
+        if (data["week"+parseInt(weekNo + 1)].meta.active){
+            clearActive(() => {
+                currDay = 0;
+                nextWeek();
+            });
+        }
+    }
+}
+
+function prevWeek(){
+    var weekNo = parseInt(((weekStart - 1) / 7) + 1);
+    if (weekNo !== 1){
+        if (data["week"+parseInt(weekNo - 1)].meta.active){
+            weekStart -= 7;
+
+            document.getElementById("schedule").innerHTML = '';
+
+            loadTimezone();
+            loadAxis();
+            loadSchedule();
+        }
+    }
+}
+
+function nextWeek(){
+    var weekNo = parseInt(((weekStart - 1) / 7) + 1);
+    if (weekStart !== 29){
+        if (data["week"+parseInt(weekNo + 1)].meta.active){
+            weekStart += 7;
+
+            document.getElementById("schedule").innerHTML = '';
+        
+            loadTimezone();
+            loadAxis();
+            loadSchedule();
+        }
+    }
 }
 
 function loadJSON(callback){
@@ -229,34 +320,44 @@ function buildDay(data, day){
 }
 
 function loadSchedule(){
-    loadJSON(function(res){
-        var events;
+    var events;
+
+    var weekno = document.getElementById("weekno");
 
         if (weekStart < 8){
-            events = res.week1;
+            events = data.week1;
+            weekno.innerText = "week 1";
         } else if (weekStart < 15){
-            events = res.week2;
+            events = data.week2;
+            weekno.innerText = "week 2";
         } else if (weekStart < 22){
-            events = res.week3;
+            events = data.week3;
+            weekno.innerText = "week 3";
         } else if (weekStart < 29){
-            events = res.week4;
+            events = data.week4;
+            weekno.innerText = "week 4";
         } else {
-            events = res.week5;
+            events = data.week5;
+            weekno.innerText = "week 5";
         }
 
-        buildDay(events.sat, "dayone")
-        buildDay(events.sun, "daytwo");
-        buildDay(events.mon, "daythree");
-        buildDay(events.tue, "dayfour");
-        buildDay(events.wed, "dayfive");
-        buildDay(events.thur, "daysix");
-        buildDay(events.fri, "dayseven");
-        loadMobile();
-    });
+        if (events.meta.active){
+
+            buildDay(events.sat, "dayone")
+            buildDay(events.sun, "daytwo");
+            buildDay(events.mon, "daythree");
+            buildDay(events.tue, "dayfour");
+            buildDay(events.wed, "dayfive");
+            buildDay(events.thur, "daysix");
+            buildDay(events.fri, "dayseven");
+            loadMobile();
+        }
 }
 
 function loadMobile(){
-    currDay = d.getDay() + 1;
+    if (currDay === undefined){
+        currDay = d.getDay() + 1;
+    }
     if (currDay > 6){
         currDay -= 7;
     }
@@ -268,31 +369,40 @@ function loadMobile(){
 }
 
 function loadTimezone(){
+    var timeHeader = document.createElement("div");
+    timeHeader.classList.add("time");
+    timeHeader.classList.add("header");
+
+    document.getElementById("schedule").appendChild(timeHeader);
+
     var timezone = d.toLocaleTimeString('en-us', {timeZoneName: 'short'}).split(' ')[2];
     document.querySelector('.header.time').innerHTML = timezone;
 }
 
 function loadAxis(){
-    // create horizontal axis in gmt
-    var today = d.getDate();
-    if (today < 8){
-        weekStart = 1;
-    } else if (today < 15){
-        weekStart = 8;
-    } else if (today < 22){
-        weekStart = 15;
-    } else if (today < 29){
-        weekStart = 22;
-    } else {
-        weekStart = 29;
-    }
+    var schedule = document.getElementById("schedule");
+
+    var morning = document.createElement("div");
+    morning.classList.add("time");
+    morning.classList.add("morning");
+    morning.setAttribute("data-label", "morning");
+
+    var afternoon = document.createElement("div");
+    afternoon.classList.add("time");
+    afternoon.classList.add("afternoon");
+    afternoon.setAttribute("data-label", "afternoon");
+
+    var evening = document.createElement("div");
+    evening.classList.add("time");
+    evening.classList.add("evening");
+    evening.setAttribute("data-label", "evening");
+
+    var night = document.createElement("div");
+    night.classList.add("time");
+    night.classList.add("night");
+    night.setAttribute("data-label", "night");
 
     var timezoneOffset = d.getTimezoneOffset() / 60;
-
-    var morning = document.querySelector(".time.morning");
-    var afternoon = document.querySelector(".time.afternoon");
-    var evening = document.querySelector(".time.evening");
-    var night = document.querySelector(".time.night");
 
     var morningStart = document.createElement("p");
     var morningEnd = document.createElement("p");
@@ -334,22 +444,50 @@ function loadAxis(){
     morning.appendChild(morningStart);
     morning.appendChild(morningEnd);
 
+    schedule.appendChild(morning);
+
     afternoon.appendChild(afternoonStart);
     afternoon.appendChild(afternoonEnd);
+
+    schedule.appendChild(afternoon);
 
     evening.appendChild(eveningStart);
     evening.appendChild(eveningEnd);
 
+    schedule.appendChild(evening);
+
     night.appendChild(nightStart);
     night.appendChild(nightEnd);
 
-    var dayone = document.querySelector(".header.dayone");
-    var daytwo = document.querySelector(".header.daytwo");
-    var daythree = document.querySelector(".header.daythree");
-    var dayfour = document.querySelector(".header.dayfour");
-    var dayfive = document.querySelector(".header.dayfive");
-    var daysix = document.querySelector(".header.daysix");
-    var dayseven = document.querySelector(".header.dayseven");
+    schedule.appendChild(night);
+
+    var dayone = document.createElement("div");
+    dayone.classList.add("header");
+    dayone.classList.add("dayone");
+
+    var daytwo = document.createElement("div");
+    daytwo.classList.add("header");
+    daytwo.classList.add("daytwo");
+
+    var daythree = document.createElement("div");
+    daythree.classList.add("header");
+    daythree.classList.add("daythree");
+
+    var dayfour = document.createElement("div");
+    dayfour.classList.add("header");
+    dayfour.classList.add("dayfour");
+
+    var dayfive = document.createElement("div");
+    dayfive.classList.add("header");
+    dayfive.classList.add("dayfive");
+
+    var daysix = document.createElement("div");
+    daysix.classList.add("header");
+    daysix.classList.add("daysix");
+
+    var dayseven = document.createElement("div");
+    dayseven.classList.add("header");
+    dayseven.classList.add("dayseven");
 
     var dates = [weekStart, weekStart + 1, weekStart + 2, weekStart + 3, weekStart + 4, weekStart + 5, weekStart + 6];
 
@@ -368,4 +506,12 @@ function loadAxis(){
     dayfive.innerHTML = `${days[4]} ${dates[4]}<span>${dates[4] === (1 || 21 || 31) ? "st" : dates[4] === (2 || 22) ? "nd" : dates[4] === (3 || 23) ? "rd" : "th"}</span>`;
     daysix.innerHTML = `${days[5]} ${dates[5]}<span>${dates[5] === (1 || 21 || 31) ? "st" : dates[5] === (2 || 22) ? "nd" : dates[5] === (3 || 23) ? "rd" : "th"}</span>`;
     dayseven.innerHTML = `${days[6]} ${dates[6]}<span>${dates[6] === (1 || 21 || 31) ? "st" : dates[6] === (2 || 22) ? "nd" : dates[6] === (3 || 23) ? "rd" : "th"}</span>`;
+
+    schedule.appendChild(dayone);
+    schedule.appendChild(daytwo);
+    schedule.appendChild(daythree);
+    schedule.appendChild(dayfour);
+    schedule.appendChild(dayfive);
+    schedule.appendChild(daysix);
+    schedule.appendChild(dayseven);
 }

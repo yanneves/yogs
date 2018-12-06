@@ -245,7 +245,7 @@
     },
     "week2": {
         "meta": {
-            "active": false
+            "active": true
         },
         "sat": {
             "date": 8,
@@ -253,23 +253,23 @@
                 {
                     "title": "stocking\nstuffers",
                     "subtitle": "jingle jam\ngames daily!",
-                    "startHour": 11,
+                    "startHour": 11
                 },
                 {
                     "title": "overwatch\ninhouse",
-                    "startHour": 14,
+                    "startHour": 14
                 },
                 {
                     "title": "minecraft\ngameshow",
                     "subtitle": "by noxcrew",
                     "type": "yellow",
-                    "startHour": 17,
+                    "startHour": 17
                 },
                 {
                     "title": "tom and ben",
-                    "subtitle": "warhammer\ntotal wa",
+                    "subtitle": "warhammer\ntotal war",
                     "type": "pink",
-                    "startHour": 20,
+                    "startHour": 20
                 }
             ]
         },
@@ -279,25 +279,25 @@
                 {
                     "title": "stocking\nstuffers",
                     "subtitle": "jingle jam\ngames daily!",
-                    "startHour": 11,
+                    "startHour": 11
                 },
                 {
                     "title": "sweden vs\nscotland",
-                    "subtitle": "rythian\nandravs",
+                    "subtitle": "rythian\nand ravs",
                     "type": "dark",
-                    "startHour": 14,
+                    "startHour": 14
                 },
                 {
-                    "title": "highrollers\naerois xmas",
+                    "title": "highrollers",
                     "subtitle": "honey heist\nand jason\nstathams\nvacation",
                     "type": "pink",
-                    "startHour": 17,
+                    "startHour": 17
                 },
                 {
                     "title": "bob ross",
                     "subtitle": "nilesy\npaintathon",
                     "type": "dark",
-                    "startHour": 20,
+                    "startHour": 20
                 }
             ]
         },
@@ -307,21 +307,21 @@
                 {
                     "title": "stocking\nstuffers",
                     "subtitle": "jingle jam\ngames daily!",
-                    "startHour": 11,
+                    "startHour": 11
                 },
                 {
                     "title": "triforce\nlive",
                     "subtitle": "sips, lewis\nand pflax",
                     "type": "pink",
-                    "startHour": 14,
+                    "startHour": 14
                 },
                 {
                     "title": "rtgame\nand tom",
                     "subtitle": "city skylines",
-                    "subtitle2": "sips, lewis,\npflax\nandrtgame",
-                    "extra": "chilling",
+                    "extra": "sips, lewis,\npflax\nandrtgame",
+                    "subtitle2": "chilling",
                     "type": "yellow double split",
-                    "startHour": 17,
+                    "startHour": 17
                 }
             ]
         },
@@ -331,40 +331,40 @@
                 {
                     "title": "stocking\nstuffers",
                     "subtitle": "jingle jam\ngames daily!",
-                    "startHour": 11,
+                    "startHour": 11
                 },
                 {
                     "title": "hat films",
-                    "subtitle": "'one' tournament",
+                    "subtitle": "\"one\"\ntournament",
                     "type": "dark",
-                    "startHour": 14,
+                    "startHour": 14
                 },
                 {
                     "title": "hoi bois",
-                    "subtitle": "isorrows, bo,\nrimmy,sips,\nlewis,pflax,\nand more!",
+                    "subtitle": "isorrows, bo,\nrimmy, sips,\nlewis, pflax,\nand more!",
                     "type": "pink double",
-                    "startHour": 17,
+                    "startHour": 17
                 }
             ]
         },
         "wed": {
-            "date": 5,
+            "date": 12,
             "events": [
                 {
                     "title": "isorrows\nmario party",
                     "type": "dark",
-                    "startHour": 11,
+                    "startHour": 11
                 },
                 {
                     "title": "sips and sjin",
                     "subtitle": "play\nsomething?",
                     "type": "dark",
-                    "startHour": 14,
+                    "startHour": 14
                 },
                 {
                     "title": "christmas\npoker\ntournament",
                     "type": "yellow double",
-                    "startHour": 17,
+                    "startHour": 17
                 }
             ]
         },
@@ -412,34 +412,197 @@
                     "subtitle": "electric\nboogaloo",
                     "type": "yellow double",
                     "startHour": 17
-                },
+                }
             ]
         }
     },
     "week3": {
         "meta": {
-            "active": false
+            "active": true
         },
         "sat": {
-
+            "date": 15,
+            "events": [
+                {
+                    "title": "stocking\nstuffers",
+                    "subtitle": "jingle jam\ngames daily!",
+                    "startHour": 11
+                },
+                {
+                    "title": "a smashing\nchristmas\nsims",
+                    "startHour": 14,
+                    "type": "pink"
+                },
+                {
+                    "title": "ladies night",
+                    "subtitle": "hannah and\nfriends",
+                    "startHour": 17,
+                    "type": "yellow"
+                },
+                {
+                    "title": "drag up your\nlife!",
+                    "subtitle": "dressing up\ncaff in drag",
+                    "startHour": 20,
+                    "type": "pink"
+                }
+            ]
         },
         "sun": {
-            
+            "date": 16,
+            "events": [
+                {
+                    "title": "stocking\nstuffers",
+                    "subtitle": "jingle jam\ngames daily!",
+                    "startHour": 11
+                },
+                {
+                    "title": "paintlicking\nparty",
+                    "subtitle": "lewis, ben,\ntom and alex",
+                    "startHour": 14,
+                    "type": "dark"
+                },
+                {
+                    "title": "highrollers\nfamily\nboardgames",
+                    "startHour": 17,
+                    "type": "pink"
+                },
+                {
+                    "title": "tba",
+                    "startHour": 20,
+                    "type": "dark"
+                }
+            ]
         },
         "mon": {
-
+            "date": 17,
+            "events": [
+                {
+                    "title": "stocking\nstuffers",
+                    "subtitle": "jingle jam\ngames daily!",
+                    "startHour": 11
+                },
+                {
+                    "title": "modded\nterraria",
+                    "subtitle": "sjin, pedguin,\nchippy and\npython",
+                    "startHour": 14,
+                    "type": "pink"
+                },
+                {
+                    "title": "simon\nand lewis",
+                    "subtitle": "important\nvideos",
+                    "info": "and special guest",
+                    "startHour": 17,
+                    "type": "yellow"
+                },
+                {
+                    "title": "bacon\nbitches",
+                    "subtitle": "pedguin, leo\nand mousie",
+                    "startHour": 20,
+                    "type": "yellow"
+                }
+            ]
         },
         "tue": {
-            
+            "date": 18,
+            "events": [
+                {
+                    "title": "stocking\nstuffers",
+                    "subtitle": "jingle jam\ngames daily!",
+                    "startHour": 11
+                },
+                {
+                    "title": "fortnite",
+                    "subtitle": "inthelittlewood\nand pedguin",
+                    "startHour": 14,
+                    "type": "dark"
+                },
+                {
+                    "title": "zoey's\nsuper long\nmega cool\ncrimbo\nstream",
+                    "startHour": 17,
+                    "type": "pink double"
+                }
+            ]
         },
         "wed": {
-
+            "date": 19,
+            "events": [
+                {
+                    "title": "stocking\nstuffers",
+                    "subtitle": "jingle jam\ngames daily!",
+                    "startHour": 11
+                },
+                {
+                    "title": "threadripper\nthe return",
+                    "subtitle": "turps and smith\nbreak a computer",
+                    "startHour": 14,
+                    "type": "dark"
+                },
+                {
+                    "title": "minecraft",
+                    "subtitle": "lewis, simon,\nduncan\nand sjin",
+                    "startHour": 17,
+                    "type": "yellow"
+                },
+                {
+                    "title": "just\ndance",
+                    "subtitle": "hosted by\nmousie",
+                    "startHour": 20
+                }
+            ]
         },
         "thur": {
-
+            "date": 20,
+            "events": [
+                {
+                    "title": "stocking\nstuffers",
+                    "subtitle": "jingle jam\ngames daily!",
+                    "startHour": 11
+                },
+                {
+                    "title": "lewis\nart stream",
+                    "startHour": 14,
+                    "type": "dark"
+                },
+                {
+                    "title": "xcom",
+                    "subtitle": "lewis and\nben",
+                    "startHour": 17,
+                    "type": "pink"
+                },
+                {
+                    "title": "tba",
+                    "startHour": 20,
+                    "type": "dark"
+                }
+            ]
         },
         "fri": {
-            
+            "date": 21,
+            "events": [
+                {
+                    "title": "nina\nand harry",
+                    "subtitle": "art stream\n and officecam",
+                    "startHour": 11,
+                    "type": "dark"
+                },
+                {
+                    "title": "artists\nvs\neditors",
+                    "startHour": 14,
+                    "type": "dark"
+                },
+                {
+                    "title": "fighting\nfantasy",
+                    "subtitle": "lewis and\nsimon",
+                    "info": "with tom, sjin,\nbarry drawing",
+                    "startHour": 17,
+                    "type": "yellow"
+                },
+                {
+                    "title": "tba",
+                    "startHour": 20,
+                    "type": "dark"
+                }
+            ]
         }
     },
     "week4": {
