@@ -72,7 +72,8 @@
                     "startHour": 14,
                     "vod": "https://www.twitch.tv/videos/343590668?t=03h22m50s",
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/343590668?t=03h22m50s"
+                        "twitch": "https://www.twitch.tv/videos/343590668?t=03h22m50s",
+                        "youtube": "https://www.youtube.com/watch?v=m4gf5wTaCmU"
                     }
                 },
                 {
@@ -92,7 +93,8 @@
                     "startHour": 20,
                     "vod": "https://www.twitch.tv/videos/343796438?t=00h06m31s",
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/343796438?t=00h06m31s"
+                        "twitch": "https://www.twitch.tv/videos/343796438?t=00h06m31s",
+                        "youtube": "https://www.youtube.com/watch?v=N3_qF0Ta5cc"
                     }
                 }
             ]
@@ -174,13 +176,19 @@
                     "subtitle": "featuring",
                     "extra": "great british\nbake off\ncontestent\nbriony",
                     "type": "dark double split",
-                    "startHour": 11
+                    "startHour": 11,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/344911782"
+                    }
                 },
                 {
                     "title": "civ 5 live",
                     "subtitle": "lewis, sjin,\nduncan, ben,\nrythian and\ndaltos",
                     "type": "yellow double",
-                    "startHour": 17
+                    "startHour": 17,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/344999680?t=00h05m19s"
+                    }
                 }
             ]
         },

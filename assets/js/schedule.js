@@ -15,7 +15,7 @@ window.onload = function(){
 function loadJSON(callback){
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
-    xobj.open('GET', 'https://yogs.ryanoconr.com/events.json', true);
+    xobj.open('GET', 'https://yogs.ryanoconr.com/events.json?t='+Date.now(), true);
     xobj.onreadystatechange = function() {
         if (xobj.readyState == 4 && xobj.status == "200"){
             callback(JSON.parse(xobj.response));
