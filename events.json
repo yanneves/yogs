@@ -146,7 +146,8 @@
                     "startHour": 11,
                     "vod": "https://www.twitch.tv/videos/344467593?t=00h30m14s",
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/344467593?t=00h30m14s"
+                        "twitch": "https://www.twitch.tv/videos/344467593?t=00h30m14s",
+                        "youtube": "https://www.youtube.com/watch?v=J7bDxaUMs2w"
                     }
                 },
                 {
@@ -156,7 +157,8 @@
                     "startHour": 14,
                     "vod": "https://www.twitch.tv/videos/344467593?t=03h33m03s",
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/344467593?t=03h33m03s"
+                        "twitch": "https://www.twitch.tv/videos/344467593?t=03h33m03s",
+                        "youtube": "https://www.youtube.com/watch?v=KfJjnNXkDzU"
                     }
                 },
                 {
@@ -166,7 +168,8 @@
                     "startHour": 17,
                     "vod": "https://www.twitch.tv/videos/344467593?t=06h51m29s",
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/344467593?t=06h51m29s"
+                        "twitch": "https://www.twitch.tv/videos/344467593?t=06h51m29s",
+                        "youtube": "https://www.youtube.com/watch?v=A1VJ_OAe70k"
                     }
                 }
             ]
