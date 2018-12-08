@@ -1,372 +1,286 @@
 @font-face {
-  font-family: "Bebas Kai";
+  font-family: 'Bebas Kai';
   src: local("Bebas Kai Regular"), local("BebasKai"), url("../fonts/BebasKai.woff2") format("woff2"), url("../fonts/BebasKai.woff") format("woff");
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 body {
   margin: 0;
-  font-family: "Bebas Kai";
+  font-family: 'Bebas Kai';
   background: url(../img/background.png) no-repeat center center;
   background-size: cover;
   font-size: 16px;
   width: 100%;
   height: 100vh;
-  user-select: none;
-}
-body #title {
-  position: fixed;
-  top: 25px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  background: #ffffff;
-  white-space: nowrap;
-}
-body #title h1 {
-  color: #091533;
-  font-weight: normal;
-  margin: 0;
-  font-size: 3rem;
-  padding: 5px 50px;
-}
-body #controls {
-  position: fixed;
-  top: calc((112px - 50px) / 2);
-  right: 100px;
-  height: 50px;
-  width: auto;
-}
-body #controls .mobile {
-  display: none;
-}
-body #controls .desktop {
-  display: flex;
-  flex-direction: row;
-}
-body #controls .desktop div {
-  height: 50px;
-  width: 50px;
-  background: #ffffff;
-  line-height: 50px;
-  vertical-align: middle;
-  text-align: center;
-  cursor: pointer;
-}
-body #controls .desktop h4 {
-  background: #ffffff;
-  font-weight: normal;
-  font-size: 1.5rem;
-  height: 50px;
-  line-height: 50px;
-  vertical-align: middle;
-  margin: 0 5px;
-  padding: 0 30px;
-}
-body #schedule {
-  position: fixed;
-  top: 112px;
-  width: calc(100% - 200px);
-  max-width: calc(100% - 200px);
-  height: calc(100vh - 62px - 50px - 50px);
-  max-height: calc(100vh - 62px - 50px - 50px);
-  left: 50%;
-  transform: translate(-50%, 0);
-  display: grid;
-  grid-template-columns: 55px repeat(7, 1fr);
-  grid-template-rows: 55px repeat(4, 1fr);
-  grid-gap: 10px;
-}
-body #schedule .time {
-  grid-column: 1;
-  background: #ffffff;
-  color: #091533;
-}
-body #schedule .time.morning, body #schedule .time.afternoon, body #schedule .time.evening, body #schedule .time.night {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  position: relative;
-}
-body #schedule .time.morning p, body #schedule .time.afternoon p, body #schedule .time.evening p, body #schedule .time.night p {
-  margin: 5px 0;
-  font-size: 1.3rem;
-  text-align: center;
-}
-body #schedule .time.morning::before, body #schedule .time.afternoon::before, body #schedule .time.evening::before, body #schedule .time.night::before {
-  position: absolute;
-  color: #a3b3d3;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-90deg);
-  font-size: 2.8vh;
-  content: attr(data-label);
-}
-body #schedule .header {
-  grid-row: 1;
-  background: #ffffff;
-  color: #091533;
-  font-size: 2rem;
-  line-height: 45px;
-  vertical-align: middle;
-  text-align: center;
-}
-body #schedule .header span {
-  vertical-align: super;
-  font-size: 1rem;
-}
-body #schedule .header.time {
-  background: transparent;
-  color: #ffffff;
-  font-size: 1rem;
-  line-height: 99px;
-  vertical-align: bottom;
-}
-body #schedule .morning:not(.time), body #schedule .afternoon:not(.time), body #schedule .evening:not(.time), body #schedule .night:not(.time) {
-  background: #2753ae;
-  box-sizing: border-box;
-  border: 5px solid #4ea8ff;
-  position: relative;
-  color: #ffffff;
-}
-body #schedule .morning:not(.time).upcoming, body #schedule .afternoon:not(.time).upcoming, body #schedule .evening:not(.time).upcoming, body #schedule .night:not(.time).upcoming {
-  cursor: no-drop;
-}
-body #schedule .morning:not(.time).split h2::before, body #schedule .afternoon:not(.time).split h2::before, body #schedule .evening:not(.time).split h2::before, body #schedule .night:not(.time).split h2::before {
-  height: 4px;
-  width: 100%;
-  background: #4ea8ff;
-  position: relative;
-  display: block;
-  content: "";
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
-  margin-bottom: 10px;
-}
-body #schedule .morning:not(.time) .center, body #schedule .afternoon:not(.time) .center, body #schedule .evening:not(.time) .center, body #schedule .night:not(.time) .center {
-  position: relative;
-  top: 50%;
-  width: 100%;
-  transform: translate(0, -50%);
-  pointer-events: none;
-}
-body #schedule .morning:not(.time) .center h1, body #schedule .afternoon:not(.time) .center h1, body #schedule .evening:not(.time) .center h1, body #schedule .night:not(.time) .center h1 {
-  font-weight: normal;
-  width: 100%;
-  text-align: center;
-  margin: 0;
-  color: inherit;
-  font-size: 2rem;
-  box-sizing: border-box;
-  padding: 0 15px;
-  pointer-events: none;
-}
-body #schedule .morning:not(.time) .center h2, body #schedule .afternoon:not(.time) .center h2, body #schedule .evening:not(.time) .center h2, body #schedule .night:not(.time) .center h2 {
-  font-weight: normal;
-  width: 100%;
-  text-align: center;
-  margin: 0;
-  color: inherit;
-  font-size: 1.5rem;
-  padding: 0 15px;
-  box-sizing: border-box;
-  margin-top: 10px;
-  pointer-events: none;
-}
-body #schedule .morning:not(.time) .center h3, body #schedule .afternoon:not(.time) .center h3, body #schedule .evening:not(.time) .center h3, body #schedule .night:not(.time) .center h3 {
-  font-size: 1rem;
-  font-weight: normal;
-  width: 100%;
-  text-align: center;
-  color: inherit;
-  margin: 0;
-  pointer-events: none;
-}
-body #schedule .morning:not(.time) .vods, body #schedule .afternoon:not(.time) .vods, body #schedule .evening:not(.time) .vods, body #schedule .night:not(.time) .vods {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: #ffffff;
-  z-index: 5;
-  color: #000000;
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.2s ease-in-out;
-}
-body #schedule .morning:not(.time) .vods .vodc, body #schedule .afternoon:not(.time) .vods .vodc, body #schedule .evening:not(.time) .vods .vodc, body #schedule .night:not(.time) .vods .vodc {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #091533;
-  text-align: center;
-}
-body #schedule .morning:not(.time) .vods .vodc h1, body #schedule .afternoon:not(.time) .vods .vodc h1, body #schedule .evening:not(.time) .vods .vodc h1, body #schedule .night:not(.time) .vods .vodc h1 {
-  font-size: 1.5rem;
-  margin: 0;
-  font-weight: normal;
-  margin-bottom: 5px;
-}
-body #schedule .morning:not(.time) .vods .vodc a, body #schedule .afternoon:not(.time) .vods .vodc a, body #schedule .evening:not(.time) .vods .vodc a, body #schedule .night:not(.time) .vods .vodc a {
-  text-decoration: none;
-}
-body #schedule .morning:not(.time) .vods .vodc i, body #schedule .afternoon:not(.time) .vods .vodc i, body #schedule .evening:not(.time) .vods .vodc i, body #schedule .night:not(.time) .vods .vodc i {
-  font-size: 2rem;
-  line-height: 32px;
-  vertical-align: middle;
-  margin: 0 5px;
-  color: #091533;
-  transition: 0.2s ease-in-out;
-}
-body #schedule .morning:not(.time) .vods .vodc i:hover.fa-twitch, body #schedule .afternoon:not(.time) .vods .vodc i:hover.fa-twitch, body #schedule .evening:not(.time) .vods .vodc i:hover.fa-twitch, body #schedule .night:not(.time) .vods .vodc i:hover.fa-twitch {
-  color: #4b367c;
-}
-body #schedule .morning:not(.time) .vods .vodc i:hover.fa-youtube, body #schedule .afternoon:not(.time) .vods .vodc i:hover.fa-youtube, body #schedule .evening:not(.time) .vods .vodc i:hover.fa-youtube, body #schedule .night:not(.time) .vods .vodc i:hover.fa-youtube {
-  color: #FF0000;
-}
-body #schedule .morning:not(.time) .vods .vodc i:hover.fa-paw, body #schedule .afternoon:not(.time) .vods .vodc i:hover.fa-paw, body #schedule .evening:not(.time) .vods .vodc i:hover.fa-paw, body #schedule .night:not(.time) .vods .vodc i:hover.fa-paw {
-  color: #FC6600;
-}
-body #schedule .morning:not(.time):hover .vods, body #schedule .afternoon:not(.time):hover .vods, body #schedule .evening:not(.time):hover .vods, body #schedule .night:not(.time):hover .vods {
-  opacity: 1;
-  pointer-events: auto;
-}
-body #schedule .morning:not(.time).pink, body #schedule .afternoon:not(.time).pink, body #schedule .evening:not(.time).pink, body #schedule .night:not(.time).pink {
-  background: #fa0057;
-}
-body #schedule .morning:not(.time).yellow, body #schedule .afternoon:not(.time).yellow, body #schedule .evening:not(.time).yellow, body #schedule .night:not(.time).yellow {
-  background: #fdd700;
-  color: #00246b;
-}
-body #schedule .morning:not(.time).dark, body #schedule .afternoon:not(.time).dark, body #schedule .evening:not(.time).dark, body #schedule .night:not(.time).dark {
-  background: #0c1d44;
-}
-body #schedule .morning {
-  grid-row: 2;
-}
-body #schedule .afternoon {
-  grid-row: 3;
-}
-body #schedule .evening {
-  grid-row: 4;
-}
-body #schedule .night {
-  grid-row: 5;
-}
-body #schedule .dayone {
-  grid-column: 2;
-}
-body #schedule .daytwo {
-  grid-column: 3;
-}
-body #schedule .double {
-  grid-row-end: span 2;
-}
+  user-select: none; }
+  body #title {
+    position: fixed;
+    top: 25px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: #ffffff;
+    white-space: nowrap; }
+    body #title h1 {
+      color: #091533;
+      font-weight: normal;
+      margin: 0;
+      font-size: 3rem;
+      padding: 5px 50px; }
+  body #controls {
+    position: fixed;
+    top: calc((112px - 50px) / 2);
+    right: 100px;
+    height: 50px;
+    width: auto; }
+    body #controls .mobile {
+      display: none; }
+    body #controls .desktop {
+      display: flex;
+      flex-direction: row; }
+      body #controls .desktop div {
+        height: 50px;
+        width: 50px;
+        background: #ffffff;
+        line-height: 50px;
+        vertical-align: middle;
+        text-align: center;
+        cursor: pointer; }
+      body #controls .desktop h4 {
+        background: #ffffff;
+        font-weight: normal;
+        font-size: 1.5rem;
+        height: 50px;
+        line-height: 50px;
+        vertical-align: middle;
+        margin: 0 5px;
+        padding: 0 30px; }
+  body #schedule {
+    position: fixed;
+    top: 112px;
+    width: calc(100% - 200px);
+    max-width: calc(100% - 200px);
+    height: calc(100vh - 62px - 50px - 50px);
+    max-height: calc(100vh - 62px - 50px - 50px);
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: grid;
+    grid-template-columns: 55px repeat(7, 1fr);
+    grid-template-rows: 55px repeat(4, 1fr);
+    grid-gap: 10px; }
+    body #schedule .time {
+      grid-column: 1;
+      background: #ffffff;
+      color: #091533; }
+      body #schedule .time.morning, body #schedule .time.afternoon, body #schedule .time.evening, body #schedule .time.night {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        position: relative; }
+        body #schedule .time.morning p, body #schedule .time.afternoon p, body #schedule .time.evening p, body #schedule .time.night p {
+          margin: 5px 0;
+          font-size: 1.3rem;
+          text-align: center; }
+        body #schedule .time.morning::before, body #schedule .time.afternoon::before, body #schedule .time.evening::before, body #schedule .time.night::before {
+          position: absolute;
+          color: #a3b3d3;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(-90deg);
+          font-size: 2.8vh;
+          content: attr(data-label); }
+    body #schedule .header {
+      grid-row: 1;
+      background: #ffffff;
+      color: #091533;
+      font-size: 2rem;
+      line-height: 45px;
+      vertical-align: middle;
+      text-align: center; }
+      body #schedule .header span {
+        vertical-align: super;
+        font-size: 1rem; }
+      body #schedule .header.time {
+        background: transparent;
+        color: #ffffff;
+        font-size: 1rem;
+        line-height: 99px;
+        vertical-align: bottom; }
+    body #schedule .morning:not(.time), body #schedule .afternoon:not(.time), body #schedule .evening:not(.time), body #schedule .night:not(.time) {
+      background: #2753ae;
+      box-sizing: border-box;
+      border: 5px solid #4ea8ff;
+      position: relative;
+      color: #ffffff; }
+      body #schedule .morning:not(.time).upcoming, body #schedule .afternoon:not(.time).upcoming, body #schedule .evening:not(.time).upcoming, body #schedule .night:not(.time).upcoming {
+        cursor: no-drop; }
+      body #schedule .morning:not(.time).split h2::before, body #schedule .afternoon:not(.time).split h2::before, body #schedule .evening:not(.time).split h2::before, body #schedule .night:not(.time).split h2::before {
+        height: 4px;
+        width: 100%;
+        background: #4ea8ff;
+        position: relative;
+        display: block;
+        content: '';
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-bottom: 10px; }
+      body #schedule .morning:not(.time) .center, body #schedule .afternoon:not(.time) .center, body #schedule .evening:not(.time) .center, body #schedule .night:not(.time) .center {
+        position: relative;
+        top: 50%;
+        width: 100%;
+        transform: translate(0, -50%);
+        pointer-events: none; }
+        body #schedule .morning:not(.time) .center h1, body #schedule .afternoon:not(.time) .center h1, body #schedule .evening:not(.time) .center h1, body #schedule .night:not(.time) .center h1 {
+          font-weight: normal;
+          width: 100%;
+          text-align: center;
+          margin: 0;
+          color: inherit;
+          font-size: 2rem;
+          box-sizing: border-box;
+          padding: 0 15px;
+          pointer-events: none; }
+        body #schedule .morning:not(.time) .center h2, body #schedule .afternoon:not(.time) .center h2, body #schedule .evening:not(.time) .center h2, body #schedule .night:not(.time) .center h2 {
+          font-weight: normal;
+          width: 100%;
+          text-align: center;
+          margin: 0;
+          color: inherit;
+          font-size: 1.5rem;
+          padding: 0 15px;
+          box-sizing: border-box;
+          margin-top: 10px;
+          pointer-events: none; }
+        body #schedule .morning:not(.time) .center h3, body #schedule .afternoon:not(.time) .center h3, body #schedule .evening:not(.time) .center h3, body #schedule .night:not(.time) .center h3 {
+          font-size: 1rem;
+          font-weight: normal;
+          width: 100%;
+          text-align: center;
+          color: inherit;
+          margin: 0;
+          pointer-events: none; }
+      body #schedule .morning:not(.time) .vods, body #schedule .afternoon:not(.time) .vods, body #schedule .evening:not(.time) .vods, body #schedule .night:not(.time) .vods {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: #ffffff;
+        z-index: 5;
+        color: #000000;
+        opacity: 0;
+        pointer-events: none;
+        transition: .2s ease-in-out; }
+        body #schedule .morning:not(.time) .vods .vodc, body #schedule .afternoon:not(.time) .vods .vodc, body #schedule .evening:not(.time) .vods .vodc, body #schedule .night:not(.time) .vods .vodc {
+          position: relative;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: #091533;
+          text-align: center; }
+          body #schedule .morning:not(.time) .vods .vodc h1, body #schedule .afternoon:not(.time) .vods .vodc h1, body #schedule .evening:not(.time) .vods .vodc h1, body #schedule .night:not(.time) .vods .vodc h1 {
+            font-size: 1.5rem;
+            margin: 0;
+            font-weight: normal;
+            margin-bottom: 5px; }
+          body #schedule .morning:not(.time) .vods .vodc a, body #schedule .afternoon:not(.time) .vods .vodc a, body #schedule .evening:not(.time) .vods .vodc a, body #schedule .night:not(.time) .vods .vodc a {
+            text-decoration: none; }
+          body #schedule .morning:not(.time) .vods .vodc i, body #schedule .afternoon:not(.time) .vods .vodc i, body #schedule .evening:not(.time) .vods .vodc i, body #schedule .night:not(.time) .vods .vodc i {
+            font-size: 2rem;
+            line-height: 32px;
+            vertical-align: middle;
+            margin: 0 5px;
+            color: #091533;
+            transition: .2s ease-in-out; }
+            body #schedule .morning:not(.time) .vods .vodc i:hover.fa-twitch, body #schedule .afternoon:not(.time) .vods .vodc i:hover.fa-twitch, body #schedule .evening:not(.time) .vods .vodc i:hover.fa-twitch, body #schedule .night:not(.time) .vods .vodc i:hover.fa-twitch {
+              color: #4b367c; }
+            body #schedule .morning:not(.time) .vods .vodc i:hover.fa-youtube, body #schedule .afternoon:not(.time) .vods .vodc i:hover.fa-youtube, body #schedule .evening:not(.time) .vods .vodc i:hover.fa-youtube, body #schedule .night:not(.time) .vods .vodc i:hover.fa-youtube {
+              color: #FF0000; }
+            body #schedule .morning:not(.time) .vods .vodc i:hover.fa-paw, body #schedule .afternoon:not(.time) .vods .vodc i:hover.fa-paw, body #schedule .evening:not(.time) .vods .vodc i:hover.fa-paw, body #schedule .night:not(.time) .vods .vodc i:hover.fa-paw {
+              color: #FC6600; }
+      body #schedule .morning:not(.time):hover .vods, body #schedule .afternoon:not(.time):hover .vods, body #schedule .evening:not(.time):hover .vods, body #schedule .night:not(.time):hover .vods {
+        opacity: 1;
+        pointer-events: auto; }
+      body #schedule .morning:not(.time).pink, body #schedule .afternoon:not(.time).pink, body #schedule .evening:not(.time).pink, body #schedule .night:not(.time).pink {
+        background: #fa0057; }
+      body #schedule .morning:not(.time).yellow, body #schedule .afternoon:not(.time).yellow, body #schedule .evening:not(.time).yellow, body #schedule .night:not(.time).yellow {
+        background: #fdd700;
+        color: #00246b; }
+      body #schedule .morning:not(.time).dark, body #schedule .afternoon:not(.time).dark, body #schedule .evening:not(.time).dark, body #schedule .night:not(.time).dark {
+        background: #0c1d44; }
+    body #schedule .morning {
+      grid-row: 2; }
+    body #schedule .afternoon {
+      grid-row: 3; }
+    body #schedule .evening {
+      grid-row: 4; }
+    body #schedule .night {
+      grid-row: 5; }
+    body #schedule .double {
+      grid-row-end: span 2; }
 
 @media only screen and (max-width: 1820px) {
   body #schedule .morning:not(.time) .center h1, body #schedule .afternoon:not(.time) .center h1, body #schedule .evening:not(.time) .center h1, body #schedule .night:not(.time) .center h1 {
-    font-size: 1.9rem;
-  }
-}
+    font-size: 1.9rem; } }
 @media only screen and (max-width: 1755px) {
   body #schedule .morning:not(.time) .center h1, body #schedule .afternoon:not(.time) .center h1, body #schedule .evening:not(.time) .center h1, body #schedule .night:not(.time) .center h1 {
-    font-size: 1.8rem;
-  }
-}
+    font-size: 1.8rem; } }
 @media only screen and (max-width: 1710px) {
   body #schedule .morning:not(.time) .center h1, body #schedule .afternoon:not(.time) .center h1, body #schedule .evening:not(.time) .center h1, body #schedule .night:not(.time) .center h1 {
-    font-size: 1.7rem;
-  }
+    font-size: 1.7rem; }
   body #schedule .morning:not(.time) .center h2, body #schedule .afternoon:not(.time) .center h2, body #schedule .evening:not(.time) .center h2, body #schedule .night:not(.time) .center h2 {
-    font-size: 1.4rem;
-  }
-}
+    font-size: 1.4rem; } }
 @media only screen and (max-width: 1640px) {
   body #schedule .morning:not(.time) .center h1, body #schedule .afternoon:not(.time) .center h1, body #schedule .evening:not(.time) .center h1, body #schedule .night:not(.time) .center h1 {
-    font-size: 1.6rem;
-  }
+    font-size: 1.6rem; }
   body #schedule .morning:not(.time) .center h2, body #schedule .afternoon:not(.time) .center h2, body #schedule .evening:not(.time) .center h2, body #schedule .night:not(.time) .center h2 {
-    font-size: 1.3rem;
-  }
-}
+    font-size: 1.3rem; } }
 @media only screen and (max-width: 1575px) {
   body #schedule .morning:not(.time) .center h1, body #schedule .afternoon:not(.time) .center h1, body #schedule .evening:not(.time) .center h1, body #schedule .night:not(.time) .center h1 {
-    font-size: 1.5rem;
-  }
+    font-size: 1.5rem; }
   body #schedule .morning:not(.time) .center h2, body #schedule .afternoon:not(.time) .center h2, body #schedule .evening:not(.time) .center h2, body #schedule .night:not(.time) .center h2 {
-    font-size: 1.2rem;
-  }
-}
+    font-size: 1.2rem; } }
 @media only screen and (max-width: 1550px) {
   body #schedule .header:not(.time) {
-    font-size: 1.9rem;
-  }
-  body #schedule .header:not(.time) span {
-    font-size: 0.9rem;
-  }
-}
+    font-size: 1.9rem; }
+    body #schedule .header:not(.time) span {
+      font-size: 0.9rem; } }
 @media only screen and (max-width: 1515px) {
   body #schedule .morning:not(.time) .center h1, body #schedule .afternoon:not(.time) .center h1, body #schedule .evening:not(.time) .center h1, body #schedule .night:not(.time) .center h1 {
-    font-size: 1.4rem;
-  }
-}
+    font-size: 1.4rem; } }
 @media only screen and (max-width: 1490px) {
   body #schedule .header:not(.time) {
-    font-size: 1.8rem;
-  }
-}
+    font-size: 1.8rem; } }
 @media only screen and (max-width: 1455px) {
   body #schedule .morning:not(.time) .center h1, body #schedule .afternoon:not(.time) .center h1, body #schedule .evening:not(.time) .center h1, body #schedule .night:not(.time) .center h1 {
-    font-size: 1.3rem;
-  }
+    font-size: 1.3rem; }
   body #schedule .morning:not(.time) .center h2, body #schedule .afternoon:not(.time) .center h2, body #schedule .evening:not(.time) .center h2, body #schedule .night:not(.time) .center h2 {
-    font-size: 1.1rem;
-  }
-}
+    font-size: 1.1rem; } }
 @media only screen and (max-width: 1440px) {
   body #schedule .header:not(.time) {
-    font-size: 1.7rem;
-  }
-}
+    font-size: 1.7rem; } }
 @media only screen and (max-width: 1420px) {
   body #schedule .morning:not(.time) .center h2, body #schedule .afternoon:not(.time) .center h2, body #schedule .evening:not(.time) .center h2, body #schedule .night:not(.time) .center h2 {
-    font-size: 1rem;
-  }
-}
+    font-size: 1rem; } }
 @media only screen and (max-width: 1395px) {
   body #schedule .morning:not(.time) .center h1, body #schedule .afternoon:not(.time) .center h1, body #schedule .evening:not(.time) .center h1, body #schedule .night:not(.time) .center h1 {
-    font-size: 1.2rem;
-  }
+    font-size: 1.2rem; }
   body #schedule .header:not(.time) {
-    font-size: 1.6rem;
-  }
-}
+    font-size: 1.6rem; } }
 @media only screen and (max-width: 1345px) {
   body #schedule .morning:not(.time) .center h1, body #schedule .afternoon:not(.time) .center h1, body #schedule .evening:not(.time) .center h1, body #schedule .night:not(.time) .center h1 {
-    font-size: 1.1rem;
-  }
+    font-size: 1.1rem; }
   body #schedule .morning:not(.time) .center h2, body #schedule .afternoon:not(.time) .center h2, body #schedule .evening:not(.time) .center h2, body #schedule .night:not(.time) .center h2 {
-    font-size: 0.9rem;
-  }
+    font-size: 0.9rem; }
   body #schedule .header:not(.time) {
-    font-size: 1.5rem;
-  }
-}
+    font-size: 1.5rem; } }
 @media only screen and (max-width: 1295px) {
   body #schedule .header:not(.time) {
-    font-size: 1.4rem;
-  }
-}
+    font-size: 1.4rem; } }
 @media only screen and (max-width: 1275px) {
   body #schedule .morning:not(.time) .center h1, body #schedule .afternoon:not(.time) .center h1, body #schedule .evening:not(.time) .center h1, body #schedule .night:not(.time) .center h1 {
-    font-size: 1rem;
-  }
+    font-size: 1rem; }
   body #schedule .morning:not(.time) .center h2, body #schedule .afternoon:not(.time) .center h2, body #schedule .evening:not(.time) .center h2, body #schedule .night:not(.time) .center h2 {
-    font-size: 0.8rem;
-  }
-}
+    font-size: 0.8rem; } }
 @media only screen and (max-width: 1250px) {
   body #controls {
     position: fixed;
@@ -377,25 +291,21 @@ body #schedule .double {
     height: 50px;
     width: auto;
     z-index: 50;
-    bottom: 25px;
-  }
-  body #controls .mobile {
-    display: flex;
-    flex-direction: row;
-  }
-  body #controls .mobile div {
-    height: 50px;
-    width: 50px;
-    background: #ffffff;
-    margin: 0 5px;
-    border: 3px solid #091533;
-    line-height: 50px;
-    vertical-align: middle;
-    text-align: center;
-  }
-  body #controls .desktop {
-    display: none;
-  }
+    bottom: 25px; }
+    body #controls .mobile {
+      display: flex;
+      flex-direction: row; }
+      body #controls .mobile div {
+        height: 50px;
+        width: 50px;
+        background: #ffffff;
+        margin: 0 5px;
+        border: 3px solid #091533;
+        line-height: 50px;
+        vertical-align: middle;
+        text-align: center; }
+    body #controls .desktop {
+      display: none; }
   body #schedule {
     width: calc(100% - 100px);
     max-width: calc(100% - 100px);
@@ -404,81 +314,61 @@ body #schedule .double {
     grid-template-rows: 55px repeat(4, auto);
     max-height: calc(100vh - 65px - 25px - 22px);
     box-sizing: border-box;
-    padding-bottom: 91px;
-    overflow: scroll;
-  }
-  body #schedule .time {
-    min-height: calc((100vh - 100px) / 4);
-  }
-  body #schedule .header {
-    grid-row: 1;
-    background: #ffffff;
-    color: #091533;
-    font-size: 2rem;
-    line-height: 45px;
-    vertical-align: middle;
-    text-align: center;
-    position: sticky;
-    top: 0;
-  }
-  body #schedule .header span {
-    vertical-align: super;
-    font-size: 1rem;
-  }
-  body #schedule .header.time {
-    background: #ffffff;
-    color: #091533;
-    font-size: 1rem;
-    vertical-align: middle;
-    min-height: auto;
-    line-height: 55px;
-  }
-  body #schedule .dayone, body #schedule .daytwo, body #schedule .daythree, body #schedule .dayfour, body #schedule .dayfive, body #schedule .daysix, body #schedule .dayseven {
-    display: none;
-  }
-  body #schedule .active {
-    display: block;
-  }
-  body #schedule .morning:not(.time) .center, body #schedule .afternoon:not(.time) .center, body #schedule .evening:not(.time) .center, body #schedule .night:not(.time) .center {
-    position: relative;
-  }
-  body #schedule .morning:not(.time) .center h1, body #schedule .afternoon:not(.time) .center h1, body #schedule .evening:not(.time) .center h1, body #schedule .night:not(.time) .center h1 {
-    font-size: 2rem;
-  }
-  body #schedule .morning:not(.time) .center h2, body #schedule .afternoon:not(.time) .center h2, body #schedule .evening:not(.time) .center h2, body #schedule .night:not(.time) .center h2 {
-    font-size: 1.5rem;
-  }
-  body #schedule .morning:not(.time) .center h3, body #schedule .afternoon:not(.time) .center h3, body #schedule .evening:not(.time) .center h3, body #schedule .night:not(.time) .center h3 {
-    font-size: 1rem;
-  }
-}
+    overflow-y: scroll;
+    overflow-x: hidden; }
+    body #schedule::after {
+      content: '';
+      height: 90px; }
+    body #schedule .time {
+      min-height: calc((100vh - 100px) / 4); }
+    body #schedule .header {
+      grid-row: 1;
+      background: #ffffff;
+      color: #091533;
+      font-size: 2rem;
+      line-height: 45px;
+      vertical-align: middle;
+      text-align: center;
+      position: sticky;
+      top: 0; }
+      body #schedule .header span {
+        vertical-align: super;
+        font-size: 1rem; }
+      body #schedule .header.time {
+        background: #ffffff;
+        color: #091533;
+        font-size: 1rem;
+        vertical-align: middle;
+        min-height: auto;
+        line-height: 55px; }
+    body #schedule .dayone, body #schedule .daytwo, body #schedule .daythree, body #schedule .dayfour, body #schedule .dayfive, body #schedule .daysix, body #schedule .dayseven {
+      display: none; }
+    body #schedule .active {
+      display: block; }
+    body #schedule .morning:not(.time) .center, body #schedule .afternoon:not(.time) .center, body #schedule .evening:not(.time) .center, body #schedule .night:not(.time) .center {
+      position: relative; }
+      body #schedule .morning:not(.time) .center h1, body #schedule .afternoon:not(.time) .center h1, body #schedule .evening:not(.time) .center h1, body #schedule .night:not(.time) .center h1 {
+        font-size: 2rem; }
+      body #schedule .morning:not(.time) .center h2, body #schedule .afternoon:not(.time) .center h2, body #schedule .evening:not(.time) .center h2, body #schedule .night:not(.time) .center h2 {
+        font-size: 1.5rem; }
+      body #schedule .morning:not(.time) .center h3, body #schedule .afternoon:not(.time) .center h3, body #schedule .evening:not(.time) .center h3, body #schedule .night:not(.time) .center h3 {
+        font-size: 1rem; } }
 @media only screen and (max-width: 620px) {
   body #title {
     width: calc(100% - 100px);
-    height: 65px;
-  }
-  body #title h1 {
-    padding: 0;
-    text-align: center;
-    line-height: 65px;
-    vertical-align: middle;
-  }
-}
+    height: 65px; }
+    body #title h1 {
+      padding: 0;
+      text-align: center;
+      line-height: 65px;
+      vertical-align: middle; } }
 @media only screen and (max-width: 580px) {
   body #title h1 {
-    font-size: 2rem;
-  }
-}
+    font-size: 2rem; } }
 @media only screen and (max-width: 420px) {
   body #title h1 {
-    font-size: 1.3rem;
-  }
-}
+    font-size: 1.3rem; } }
 @media only screen and (max-width: 350px) {
   body #schedule {
     max-width: calc(100% - 20px);
-    width: calc(100% - 20px);
-  }
-}
-
-/*# sourceMappingURL=main.css.map */
+    width: calc(100% - 20px); } }
