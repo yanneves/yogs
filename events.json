@@ -270,7 +270,7 @@
                 },
                 {
                     "title": "tom and ben",
-                    "subtitle": "warhammer\ntotal war",
+                    "subtitle": "warhammer:\ntotal war",
                     "type": "pink",
                     "startHour": 20
                 }
@@ -285,20 +285,20 @@
                     "startHour": 11
                 },
                 {
-                    "title": "sweden vs\nscotland",
+                    "title": "sweden vs.\nscotland",
                     "subtitle": "rythian\nand ravs",
                     "type": "dark",
                     "startHour": 14
                 },
                 {
                     "title": "highrollers",
-                    "subtitle": "honey heist\nand jason\nstathams\nvacation",
+                    "subtitle": "honey heist\nand jason\nstatham's\nvacation",
                     "type": "pink",
                     "startHour": 17
                 },
                 {
                     "title": "bob ross",
-                    "subtitle": "nilesy\npaintathon",
+                    "subtitle": "nilesy's\npaint-a-thon",
                     "type": "dark",
                     "startHour": 20
                 }
@@ -320,7 +320,7 @@
                 },
                 {
                     "title": "rtgame\nand tom",
-                    "subtitle": "cities skylines",
+                    "subtitle": "cities: skylines",
                     "extra": "sips, lewis,\npflax\nand rtgame",
                     "subtitle2": "chilling",
                     "type": "yellow double split",
@@ -387,12 +387,12 @@
                 },
                 {
                     "title": "christmas\nroleplaying",
-                    "subtitle": "tom, lewis \nand friends!",
+                    "subtitle": "tom, lewis, \nand friends!",
                     "type": "pink",
                     "startHour": 17
                 },
                 {
-                    "title": "hatfilms\nrainbow\nsix siege",
+                    "title": "hat films\nrainbow\nsix: siege",
                     "startHour": 20
                 }
             ]
@@ -406,7 +406,7 @@
                     "startHour": 11
                 },
                 {
-                    "title": "lewis and\ndad",
+                    "title": "lewis and\nhis dad",
                     "type": "dark",
                     "startHour": 14
                 },
@@ -460,7 +460,7 @@
                 },
                 {
                     "title": "paintlicking\nparty",
-                    "subtitle": "lewis, ben,\ntom and alex",
+                    "subtitle": "lewis, ben,\ntom, and alex",
                     "startHour": 14,
                     "type": "dark"
                 },
@@ -535,14 +535,14 @@
                     "startHour": 11
                 },
                 {
-                    "title": "threadripper\nthe return",
+                    "title": "threadripper:\nthe return",
                     "subtitle": "turps and smith\nbreak a computer",
                     "startHour": 14,
                     "type": "dark"
                 },
                 {
                     "title": "minecraft",
-                    "subtitle": "lewis, simon,\nduncan\nand sjin",
+                    "subtitle": "lewis, simon,\nduncan,\nand sjin",
                     "startHour": 17,
                     "type": "yellow"
                 },
@@ -589,7 +589,7 @@
                     "type": "dark"
                 },
                 {
-                    "title": "artists\nvs\neditors",
+                    "title": "artists\nvs.\neditors",
                     "startHour": 14,
                     "type": "dark"
                 },
