@@ -320,8 +320,8 @@
                 },
                 {
                     "title": "rtgame\nand tom",
-                    "subtitle": "city skylines",
-                    "extra": "sips, lewis,\npflax\nandrtgame",
+                    "subtitle": "cities skylines",
+                    "extra": "sips, lewis,\npflax\nand rtgame",
                     "subtitle2": "chilling",
                     "type": "yellow double split",
                     "startHour": 17
@@ -344,7 +344,7 @@
                 },
                 {
                     "title": "hoi bois",
-                    "subtitle": "isorrows, bo,\nrimmy, sips,\nlewis, pflax,\nand more!",
+                    "subtitle": "isorrow, bo,\nrimmy, sips,\nlewis, pflax,\nand more!",
                     "type": "pink double",
                     "startHour": 17
                 }
@@ -354,7 +354,7 @@
             "date": 12,
             "events": [
                 {
-                    "title": "isorrows\nmario party",
+                    "title": "isorrow\nmario party",
                     "type": "dark",
                     "startHour": 11
                 },
