@@ -110,6 +110,38 @@ body {
             line-height: 45px;
             vertical-align: middle;
             text-align: center;
+            position: relative;
+            &:hover {
+                .vod {
+                    background: #ffffff;
+                    opacity: 1;
+                }
+            }
+            .vod {
+                transition: .2s ease-in-out;
+                opacity: 0;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                vertical-align: super;
+                line-height: 55px;                
+                &.upcoming {
+                    cursor: no-drop;
+                }
+                a {
+                    padding-left: 0.5rem;
+                    text-decoration: none;
+                }
+                i {
+                    transition: .2s ease-in-out;
+                    color: #091533;
+                    &:hover {
+                        color: #FF0000;
+                    }
+                }
+            }
             span {
                 vertical-align: super;
                 font-size: 1rem;

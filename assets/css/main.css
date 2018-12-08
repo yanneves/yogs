@@ -94,7 +94,31 @@ body {
       font-size: 2rem;
       line-height: 45px;
       vertical-align: middle;
-      text-align: center; }
+      text-align: center;
+      position: relative; }
+      body #schedule .header:hover .vod {
+        background: #ffffff;
+        opacity: 1; }
+      body #schedule .header .vod {
+        transition: .2s ease-in-out;
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        vertical-align: super;
+        line-height: 55px; }
+        body #schedule .header .vod.upcoming {
+          cursor: no-drop; }
+        body #schedule .header .vod a {
+          padding-left: 0.5rem;
+          text-decoration: none; }
+        body #schedule .header .vod i {
+          transition: .2s ease-in-out;
+          color: #091533; }
+          body #schedule .header .vod i:hover {
+            color: #FF0000; }
       body #schedule .header span {
         vertical-align: super;
         font-size: 1rem; }
@@ -372,3 +396,5 @@ body {
   body #schedule {
     max-width: calc(100% - 20px);
     width: calc(100% - 20px); } }
+
+/*# sourceMappingURL=main.css.map */
