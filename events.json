@@ -328,7 +328,10 @@
                 {
                     "title": "stocking\nstuffers",
                     "subtitle": "jingle jam\ngames daily!",
-                    "startHour": 11
+                    "startHour": 11,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/346757076?t=00h05m31s"
+                    }
                 },
                 {
                     "title": "sweden vs.\nscotland",
