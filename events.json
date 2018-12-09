@@ -223,7 +223,8 @@
                     "type": "dark",
                     "startHour": 14,
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/345340973?t=03h38m55s"
+                        "twitch": "https://www.twitch.tv/videos/345340973?t=03h38m55s",
+                        "youtube": "https://www.youtube.com/watch?v=7qvV2RnlooA"
                     }
                 },
                 {
