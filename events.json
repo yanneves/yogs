@@ -189,7 +189,8 @@
                     "type": "dark double split",
                     "startHour": 11,
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/344911782"
+                        "twitch": "https://www.twitch.tv/videos/344911782",
+                        "youtube": "https://www.youtube.com/watch?v=RFxXs2o-_fY"
                     }
                 },
                 {
@@ -210,20 +211,29 @@
                 {
                     "title": "stocking\nstuffers",
                     "subtitle": "jingle jam\ngames daily!",
-                    "startHour": 11
+                    "startHour": 11,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/345340973?t=00h30m59s"
+                    }
                 },
                 {
                     "title": "lego builds",
                     "subtitle": "with tom,\nturps and\nsimon!",
                     "type": "dark",
-                    "startHour": 14
+                    "startHour": 14,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/345340973?t=03h38m55s"
+                    }
                 },
                 {
                     "title": "karaoke",
                     "subtitle": "turps and\nfriends!",
                     "subtitle2": "(live band)",
                     "type": "pink double",
-                    "startHour": 17
+                    "startHour": 17,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/345340973?t=07h15m17s"
+                    }
                 }
             ]
         },
@@ -234,24 +244,36 @@
                 {
                     "title": "stocking\nstuffers",
                     "subtitle": "jingle jam\ngames daily!",
-                    "startHour": 11
+                    "startHour": 11,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/345789164?t=00h33m23s"
+                    }
                 },
                 {
                     "title": "vidiots",
                     "subtitle": "worst games\never",
                     "type": "dark",
-                    "startHour": 14
+                    "startHour": 14,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/345789164?t=03h37m44s"
+                    }
                 },
                 {
                     "title": "chilluminati",
                     "subtitle": "christmas nativity",
                     "subtitle2": "tom, simon,\nsjin and barry",
                     "type": "yellow",
-                    "startHour": 17
+                    "startHour": 17,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/345789164?t=06h59m44s"
+                    }
                 },
                 {
                     "title": "rainbow\nsix siege\ninhouse",
-                    "startHour": 20
+                    "startHour": 20,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/345965566?t=00h08m03s"
+                    }
                 }
             ]
         }
@@ -266,23 +288,35 @@
                 {
                     "title": "stocking\nstuffers",
                     "subtitle": "jingle jam\ngames daily!",
-                    "startHour": 11
+                    "startHour": 11,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/346265556?t=00h08m32s"
+                    }
                 },
                 {
                     "title": "overwatch\ninhouse",
-                    "startHour": 14
+                    "startHour": 14,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/346265556?t=03h14m29s"
+                    }
                 },
                 {
                     "title": "minecraft\ngameshow",
                     "subtitle": "by noxcrew",
                     "type": "yellow",
-                    "startHour": 17
+                    "startHour": 17,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/346265556?t=06h26m32s"
+                    }
                 },
                 {
                     "title": "tom and ben",
                     "subtitle": "warhammer:\ntotal war",
                     "type": "pink",
-                    "startHour": 20
+                    "startHour": 20,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/346265556?t=09h27m15s"
+                    }
                 }
             ]
         },
