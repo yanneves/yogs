@@ -213,7 +213,8 @@
                     "subtitle": "jingle jam\ngames daily!",
                     "startHour": 11,
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/345340973?t=00h30m59s"
+                        "twitch": "https://www.twitch.tv/videos/345340973?t=00h30m59s",
+                        "youtube": "https://www.youtube.com/watch?v=YJXbVlYK7jM"
                     }
                 },
                 {
