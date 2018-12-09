@@ -110,6 +110,38 @@ body {
             line-height: 45px;
             vertical-align: middle;
             text-align: center;
+            position: relative;
+            &:hover {
+                .vod {
+                    background: #ffffff;
+                    opacity: 1;
+                }
+            }
+            .vod {
+                transition: .2s ease-in-out;
+                opacity: 0;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                vertical-align: super;
+                line-height: 55px;                
+                &.upcoming {
+                    cursor: no-drop;
+                }
+                a {
+                    padding-left: 0.5rem;
+                    text-decoration: none;
+                }
+                i {
+                    transition: .2s ease-in-out;
+                    color: #091533;
+                    &:hover {
+                        color: #FF0000;
+                    }
+                }
+            }
             span {
                 vertical-align: super;
                 font-size: 1rem;
@@ -261,12 +293,6 @@ body {
         }
         .night {
             grid-row: 5;
-        }
-        .dayone {
-            grid-column: 2;
-        }
-        .daytwo {
-            grid-column: 3;
         }
         .double {
             grid-row-end: span 2;
@@ -497,6 +523,10 @@ body {
             }
         }
         #schedule {
+            &::after {
+                content: '';
+                height: 90px;
+            }
             width: calc(100% - 100px);
             max-width: calc(100% - 100px);
             height: auto;
@@ -504,8 +534,8 @@ body {
             grid-template-rows: 55px repeat(4, auto);
             max-height: calc(100vh - 65px - 25px - 22px);
             box-sizing: border-box;
-            padding-bottom: 91px;
-            overflow: scroll;
+            overflow-y: scroll;
+            overflow-x: hidden;
             .time {
                 min-height: calc((100vh - 100px) / 4);
             }

@@ -116,6 +116,35 @@ function loadJSON(callback){
 }
 
 function buildDay(data, day){
+    var dayVodEl = document.createElement("div");
+    dayVodEl.classList.add("vod");
+    if (data.madcat !== undefined) {
+        var dayVodLinkEl = document.createElement("a");
+        dayVodEl.innerText = "Watch vod";
+        
+        var madcatIcon = document.createElement("i");
+        
+        madcatIcon.classList.add("fas");
+        madcatIcon.classList.add("fa-paw");
+        
+        dayVodLinkEl.appendChild(madcatIcon);
+        
+        dayVodLinkEl.setAttribute("href", data.madcat);
+        dayVodLinkEl.setAttribute("target", "_blank");
+        dayVodLinkEl.setAttribute("title", "Watch recap");
+
+        dayVodEl.appendChild(dayVodLinkEl);
+        
+        var headerEl = document.querySelector(`.header.${day}`);
+        
+        headerEl.insertAdjacentElement('afterbegin', dayVodEl);
+    } else {
+        dayVodEl.classList.add("upcoming");
+        dayVodEl.innerText = "Awaiting vod";
+    }
+    var headerEl = document.querySelector(`.header.${day}`);
+    headerEl.insertAdjacentElement('afterbegin', dayVodEl);
+
     Object.keys(data.events).forEach(e => {
         var title = (data.events[e].title !== undefined) ? data.events[e].title : "";
         var subtitle = (data.events[e].subtitle !== undefined) ? data.events[e].subtitle : "";
@@ -462,32 +491,53 @@ function loadAxis(){
     schedule.appendChild(night);
 
     var dayone = document.createElement("div");
+    var dayoneDate = document.createElement("div");
+    dayoneDate.classList.add("date");
     dayone.classList.add("header");
     dayone.classList.add("dayone");
+    dayone.appendChild(dayoneDate);
 
     var daytwo = document.createElement("div");
+    var daytwoDate = document.createElement("div");
+    daytwoDate.classList.add("date");
     daytwo.classList.add("header");
     daytwo.classList.add("daytwo");
-
+    daytwo.appendChild(daytwoDate);
+    
     var daythree = document.createElement("div");
+    var daythreeDate = document.createElement("div");
+    daythreeDate.classList.add("date");
     daythree.classList.add("header");
     daythree.classList.add("daythree");
+    daythree.appendChild(daythreeDate);
 
     var dayfour = document.createElement("div");
+    var dayfourDate = document.createElement("div");
+    dayfourDate.classList.add("date");
     dayfour.classList.add("header");
     dayfour.classList.add("dayfour");
+    dayfour.appendChild(dayfourDate);
 
     var dayfive = document.createElement("div");
+    var dayfiveDate = document.createElement("div");
+    dayfiveDate.classList.add("date");
     dayfive.classList.add("header");
     dayfive.classList.add("dayfive");
+    dayfive.appendChild(dayfiveDate);
 
     var daysix = document.createElement("div");
+    var daysixDate = document.createElement("div");
+    daysixDate.classList.add("date");
     daysix.classList.add("header");
     daysix.classList.add("daysix");
+    daysix.appendChild(daysixDate);
 
     var dayseven = document.createElement("div");
+    var daysevenDate = document.createElement("div");
+    daysevenDate.classList.add("date");
     dayseven.classList.add("header");
     dayseven.classList.add("dayseven");
+    dayseven.appendChild(daysevenDate);
 
     var dates = [weekStart, weekStart + 1, weekStart + 2, weekStart + 3, weekStart + 4, weekStart + 5, weekStart + 6];
 
@@ -499,13 +549,13 @@ function loadAxis(){
         }
     });
 
-    dayone.innerHTML = `${days[0]} ${dates[0]}<span>${dates[0] === (1 || 21 || 31) ? "st" : dates[0] === (2 || 22) ? "nd" : dates[0] === (3 || 23) ? "rd" : "th"}</span>`;
-    daytwo.innerHTML = `${days[1]} ${dates[1]}<span>${dates[1] === (1 || 21 || 31) ? "st" : dates[1] === (2 || 22) ? "nd" : dates[1] === (3 || 23) ? "rd" : "th"}</span>`;
-    daythree.innerHTML = `${days[2]} ${dates[2]}<span>${dates[2] === (1 || 21 || 31) ? "st" : dates[2] === (2 || 22) ? "nd" : dates[2] === (3 || 23) ? "rd" : "th"}</span>`;
-    dayfour.innerHTML = `${days[3]} ${dates[3]}<span>${dates[3] === (1 || 21 || 31) ? "st" : dates[3] === (2 || 22) ? "nd" : dates[3] === (3 || 23) ? "rd" : "th"}</span>`;
-    dayfive.innerHTML = `${days[4]} ${dates[4]}<span>${dates[4] === (1 || 21 || 31) ? "st" : dates[4] === (2 || 22) ? "nd" : dates[4] === (3 || 23) ? "rd" : "th"}</span>`;
-    daysix.innerHTML = `${days[5]} ${dates[5]}<span>${dates[5] === (1 || 21 || 31) ? "st" : dates[5] === (2 || 22) ? "nd" : dates[5] === (3 || 23) ? "rd" : "th"}</span>`;
-    dayseven.innerHTML = `${days[6]} ${dates[6]}<span>${dates[6] === (1 || 21 || 31) ? "st" : dates[6] === (2 || 22) ? "nd" : dates[6] === (3 || 23) ? "rd" : "th"}</span>`;
+    dayoneDate.innerHTML = `${days[0]} ${dates[0]}<span>${dates[0] === (1 || 21 || 31) ? "st" : dates[0] === (2 || 22) ? "nd" : dates[0] === (3 || 23) ? "rd" : "th"}</span>`;
+    daytwoDate.innerHTML = `${days[1]} ${dates[1]}<span>${dates[1] === (1 || 21 || 31) ? "st" : dates[1] === (2 || 22) ? "nd" : dates[1] === (3 || 23) ? "rd" : "th"}</span>`;
+    daythreeDate.innerHTML = `${days[2]} ${dates[2]}<span>${dates[2] === (1 || 21 || 31) ? "st" : dates[2] === (2 || 22) ? "nd" : dates[2] === (3 || 23) ? "rd" : "th"}</span>`;
+    dayfourDate.innerHTML = `${days[3]} ${dates[3]}<span>${dates[3] === (1 || 21 || 31) ? "st" : dates[3] === (2 || 22) ? "nd" : dates[3] === (3 || 23) ? "rd" : "th"}</span>`;
+    dayfiveDate.innerHTML = `${days[4]} ${dates[4]}<span>${dates[4] === (1 || 21 || 31) ? "st" : dates[4] === (2 || 22) ? "nd" : dates[4] === (3 || 23) ? "rd" : "th"}</span>`;
+    daysixDate.innerHTML = `${days[5]} ${dates[5]}<span>${dates[5] === (1 || 21 || 31) ? "st" : dates[5] === (2 || 22) ? "nd" : dates[5] === (3 || 23) ? "rd" : "th"}</span>`;
+    daysevenDate.innerHTML = `${days[6]} ${dates[6]}<span>${dates[6] === (1 || 21 || 31) ? "st" : dates[6] === (2 || 22) ? "nd" : dates[6] === (3 || 23) ? "rd" : "th"}</span>`;
 
     schedule.appendChild(dayone);
     schedule.appendChild(daytwo);
