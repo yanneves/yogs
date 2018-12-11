@@ -248,7 +248,8 @@
                     "subtitle": "jingle jam\ngames daily!",
                     "startHour": 11,
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/345789164?t=00h33m23s"
+                        "twitch": "https://www.twitch.tv/videos/345789164?t=00h33m23s",
+                        "youtube": "https://www.youtube.com/watch?v=wzwr2cqAUOc"
                     }
                 },
                 {
@@ -257,7 +258,8 @@
                     "type": "dark",
                     "startHour": 14,
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/345789164?t=03h37m44s"
+                        "twitch": "https://www.twitch.tv/videos/345789164?t=03h37m44s",
+                        "youtube": "https://www.youtube.com/watch?v=YJoz2TgzutM"
                     }
                 },
                 {
@@ -267,14 +269,16 @@
                     "type": "yellow",
                     "startHour": 17,
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/345789164?t=06h59m44s"
+                        "twitch": "https://www.twitch.tv/videos/345789164?t=06h59m44s",
+                        "youtube": "https://www.youtube.com/watch?v=cbURUdLc_sg"
                     }
                 },
                 {
                     "title": "rainbow\nsix siege\ninhouse",
                     "startHour": 20,
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/345965566?t=00h08m03s"
+                        "twitch": "https://www.twitch.tv/videos/345965566?t=00h08m03s",
+                        "youtube": "https://www.youtube.com/watch?v=wGcxbMEe58E"
                     }
                 }
             ]
@@ -286,6 +290,7 @@
         },
         "sat": {
             "date": 8,
+            "madcat": "https://www.youtube.com/watch?v=9uO1A1IpAx0",
             "events": [
                 {
                     "title": "stocking\nstuffers",
@@ -324,6 +329,7 @@
         },
         "sun": {
             "date": 9,
+            "madcat": "https://www.youtube.com/watch?v=SMFwYJq_ZDE",
             "events": [
                 {
                     "title": "stocking\nstuffers",
@@ -337,19 +343,28 @@
                     "title": "sweden vs.\nscotland",
                     "subtitle": "rythian\nand ravs",
                     "type": "dark",
-                    "startHour": 14
+                    "startHour": 14,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/346804997"
+                    }
                 },
                 {
                     "title": "highrollers",
                     "subtitle": "honey heist\nand jason\nstatham's\nvacation",
                     "type": "pink",
-                    "startHour": 17
+                    "startHour": 17,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/346867965?t=00h05m51s"
+                    }
                 },
                 {
                     "title": "bob ross",
                     "subtitle": "nilesy's\npaint-a-thon",
                     "type": "dark",
-                    "startHour": 20
+                    "startHour": 20,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/346951768"
+                    }
                 }
             ]
         },
@@ -359,13 +374,19 @@
                 {
                     "title": "stocking\nstuffers",
                     "subtitle": "jingle jam\ngames daily!",
-                    "startHour": 11
+                    "startHour": 11,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/347199912?t=00h23m17s"
+                    }
                 },
                 {
                     "title": "triforce\nlive",
                     "subtitle": "sips, lewis\nand pflax",
                     "type": "pink",
-                    "startHour": 14
+                    "startHour": 14,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/347199912?t=03h22m23s"
+                    }
                 },
                 {
                     "title": "rtgame\nand tom",
@@ -373,7 +394,10 @@
                     "extra": "sips, lewis,\npflax\nand rtgame",
                     "subtitle2": "chilling",
                     "type": "yellow double split",
-                    "startHour": 17
+                    "startHour": 17,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/347199912?t=07h34m56s"
+                    }
                 }
             ]
         },
