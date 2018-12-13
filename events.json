@@ -85,7 +85,8 @@
                     "startHour": 17,
                     "vod": "https://www.twitch.tv/videos/343590668?t=06h26m24s",
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/343590668?t=06h26m24s"
+                        "twitch": "https://www.twitch.tv/videos/343590668?t=06h26m24s",
+                        "youtube": "https://www.youtube.com/watch?v=7dUesSrk3pc"
                     }
                 },
                 {
@@ -297,14 +298,16 @@
                     "subtitle": "jingle jam\ngames daily!",
                     "startHour": 11,
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/346265556?t=00h08m32s"
+                        "twitch": "https://www.twitch.tv/videos/346265556?t=00h08m32s",
+                        "youtube": "https://www.youtube.com/watch?v=v08Odp0g4Rg"
                     }
                 },
                 {
                     "title": "overwatch\ninhouse",
                     "startHour": 14,
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/346265556?t=03h14m29s"
+                        "twitch": "https://www.twitch.tv/videos/346265556?t=03h14m29s",
+                        "youtube": "https://www.youtube.com/watch?v=ZVMaVW1RfMM"
                     }
                 },
                 {
@@ -313,7 +316,8 @@
                     "type": "yellow",
                     "startHour": 17,
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/346265556?t=06h26m32s"
+                        "twitch": "https://www.twitch.tv/videos/346265556?t=06h26m32s",
+                        "youtube": "https://www.youtube.com/watch?v=YZKlHYl1Z8I"
                     }
                 },
                 {
@@ -322,7 +326,8 @@
                     "type": "pink",
                     "startHour": 20,
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/346265556?t=09h27m15s"
+                        "twitch": "https://www.twitch.tv/videos/346265556?t=09h27m15s",
+                        "youtube": "https://www.youtube.com/watch?v=iVMxSZ8Trnk"
                     }
                 }
             ]
@@ -336,7 +341,8 @@
                     "subtitle": "jingle jam\ngames daily!",
                     "startHour": 11,
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/346757076?t=00h05m31s"
+                        "twitch": "https://www.twitch.tv/videos/346757076?t=00h05m31s",
+                        "youtube": "https://www.youtube.com/watch?v=q1G5l3AWbp8"
                     }
                 },
                 {
@@ -345,7 +351,8 @@
                     "type": "dark",
                     "startHour": 14,
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/346804997"
+                        "twitch": "https://www.twitch.tv/videos/346804997",
+                        "youtube": "https://www.youtube.com/watch?v=XqC3giYmZYA"
                     }
                 },
                 {
@@ -363,7 +370,8 @@
                     "type": "dark",
                     "startHour": 20,
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/346951768"
+                        "twitch": "https://www.twitch.tv/videos/346951768",
+                        "youtube": "https://www.youtube.com/watch?v=Os2zC55XUgw"
                     }
                 }
             ]
@@ -407,19 +415,28 @@
                 {
                     "title": "stocking\nstuffers",
                     "subtitle": "jingle jam\ngames daily!",
-                    "startHour": 11
+                    "startHour": 11,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/347628218?t=00h10m42s"
+                    }
                 },
                 {
                     "title": "hat films",
                     "subtitle": "\"one\"\ntournament",
                     "type": "dark",
-                    "startHour": 14
+                    "startHour": 14,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/347628218?t=03h17m34s"
+                    }
                 },
                 {
                     "title": "hoi bois",
                     "subtitle": "isorrow, bo,\nrimmy, sips,\nlewis, pflax,\nand more!",
                     "type": "pink double",
-                    "startHour": 17
+                    "startHour": 17,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/347628218?t=06h06m55s"
+                    }
                 }
             ]
         },
@@ -429,18 +446,27 @@
                 {
                     "title": "isorrow\nmario party",
                     "type": "dark",
-                    "startHour": 11
+                    "startHour": 11,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/348054430?t=00h39m46s"
+                    }
                 },
                 {
                     "title": "sips and sjin",
                     "subtitle": "play\nsomething?",
                     "type": "dark",
-                    "startHour": 14
+                    "startHour": 14,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/348054430?t=03h43m40s"
+                    }
                 },
                 {
                     "title": "christmas\npoker\ntournament",
                     "type": "yellow double",
-                    "startHour": 17
+                    "startHour": 17,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/348054430?t=06h38m21s"
+                    }
                 }
             ]
         },
