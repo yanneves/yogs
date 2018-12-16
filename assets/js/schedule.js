@@ -279,8 +279,7 @@ function buildDay(data, day){
             var vodc = document.createElement("div");
             vodc.classList.add("vodc");
             vods.classList.add("vods");
-
-            if (eventEnd <= utcHours && eventDate == utc){
+            if (eventDate < utc || (eventEnd <= utcHours && eventDate == utc)){
                 var vodh1 = document.createElement("h1");
                 vodh1.innerText = "awaiting vod";
                 vodc.appendChild(vodh1);
