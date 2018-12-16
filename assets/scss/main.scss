@@ -10,7 +10,7 @@
 body {
     margin: 0;
     font-family: 'Bebas Kai';
-    background: url(../img/background.png) no-repeat center center;
+    background: url(../img/background.jpg) no-repeat center center;
     background-size: cover;
     font-size: 16px;
     width: 100%;
@@ -126,7 +126,7 @@ body {
                 left: 0;
                 top: 0;
                 vertical-align: super;
-                line-height: 55px;                
+                line-height: 55px;
                 &.upcoming {
                     cursor: no-drop;
                 }
