@@ -265,6 +265,42 @@ body {
                     }
                 }
             }
+            .bonus {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background: #0c1d44;
+                width: 100%;
+                h5 {
+                    background: #ffffff;
+                    color: #0c1d44;
+                    font-size: 1rem;
+                    font-weight: normal;
+                    width: 100%;
+                    text-align: center;
+                    margin: 0;
+                }
+                h4 {
+                    font-weight: normal;
+                    width: 100%;
+                    text-align: center;
+                    margin: 0;
+                    color: inherit;
+                    font-size: 2rem;
+                    box-sizing: border-box;
+                    pointer-events: none;
+                    margin-top: 5px;
+                }
+                h6 {
+                    font-weight: normal;
+                    font-size: 1.2rem;
+                    width: 100%;
+                    text-align: center;
+                    color: inherit;
+                    margin: 0;
+                    margin-bottom: 5px;
+                }
+            }
             &:hover {
                 .vods {
                     opacity: 1;
@@ -280,6 +316,11 @@ body {
             }
             &.dark {
                 background: #0c1d44;
+            }
+            &.bonus {
+                .center {
+                    transform: translate(0, -70%);
+                }
             }
         }
         .morning {
@@ -308,6 +349,11 @@ body {
                     font-size: 1.9rem;
                 }
             }
+            .bonus {
+                h4 {
+                    font-size: 1.9rem;
+                }
+            }
         }
     }
 }
@@ -317,6 +363,11 @@ body {
         .morning:not(.time), .afternoon:not(.time), .evening:not(.time), .night:not(.time){
             .center {
                 h1 {
+                    font-size: 1.8rem;
+                }
+            }
+            .bonus {
+                h4 {
                     font-size: 1.8rem;
                 }
             }
@@ -335,6 +386,11 @@ body {
                     font-size: 1.4rem;
                 }
             }
+            .bonus {
+                h4 {
+                    font-size: 1.7rem;
+                }
+            }
         }
     }
 }
@@ -350,6 +406,11 @@ body {
                     font-size: 1.3rem;
                 }
             }
+            .bonus {
+                h4 {
+                    font-size: 1.6rem;
+                }
+            }
         }
     }
 }
@@ -363,6 +424,11 @@ body {
                 }
                 h2 {
                     font-size: 1.2rem;
+                }
+            }
+            .bonus {
+                h4 {
+                    font-size: 1.5rem;
                 }
             }
         }
@@ -388,6 +454,11 @@ body {
                     font-size: 1.4rem;
                 }
             }
+            .bonus {
+                h4 {
+                    font-size: 1.4rem;
+                }
+            }
         }
     }
 }
@@ -409,6 +480,11 @@ body {
                 }
                 h2 {
                     font-size: 1.1rem;
+                }
+            }
+            .bonus {
+                h4 {
+                    font-size: 1.3rem;
                 }
             }
         }
@@ -443,6 +519,14 @@ body {
                     font-size: 1.2rem;
                 }
             }
+            .bonus {
+                h4 {
+                    font-size: 1.2rem;
+                }
+                h6 {
+                    font-size: 1rem;
+                }
+            }
         }
         .header:not(.time){
             font-size: 1.6rem;
@@ -459,6 +543,11 @@ body {
                 }
                 h2 {
                     font-size: 0.9rem;
+                }
+            }
+            .bonus {
+                h4 {
+                    font-size: 1.1rem;
                 }
             }
         }
@@ -485,6 +574,11 @@ body {
                 }
                 h2 {
                     font-size: 0.8rem;
+                }
+            }
+            .bonus {
+                h4 {
+                    font-size: 1rem;
                 }
             }
         }
@@ -579,6 +673,14 @@ body {
                     }
                     h3 {
                         font-size: 1rem;
+                    }
+                }
+                .bonus {
+                    h4 {
+                        font-size: 2rem;
+                    }
+                    h6 {
+                        font-size: 1.2rem;
                     }
                 }
             }

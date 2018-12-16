@@ -154,6 +154,9 @@ function buildDay(data, day){
         var type = (data.events[e].type !== undefined) ? data.events[e].type : "";
         var double = type.indexOf('double') >= 0;
 
+        // bonus event details
+        var bonus = (data.events[e].bonus !== undefined) ? data.events[e].bonus : "";
+
         var eventDate = data.date;
         var eventHour = data.events[e].startHour;
         var eventEnd = eventHour + (double ? 6 : 3);
@@ -343,6 +346,57 @@ function buildDay(data, day){
         center.classList.add("center");
 
         event.appendChild(center);
+
+        if (bonus !== ""){
+            var bonusElem = document.createElement("div");
+            bonusElem.classList.add("bonus");
+
+            var timezoneOffset = d.getTimezoneOffset() / 60;
+
+            var bonusTime = document.createElement("h5");
+
+            var bonusStart = parseInt(bonus.startHour) - timezoneOffset;
+            var bonusEnd = parseInt(bonus.endHour) - timezoneOffset;
+
+            if (bonusStart > 23){
+                bonusStart -= 24;
+            } else if (bonusStart < 0){
+                bonusStart += 24;
+            }
+
+            if (bonusEnd > 23){
+                bonusEnd -= 24;
+            } else if (bonusEnd < 0){
+                bonusEnd += 24;
+            }
+
+            if (bonusStart < 10){
+                bonusStart = "0" + bonusStart;
+            }
+
+            if (bonusEnd < 10){
+                bonusEnd = "0" + bonusEnd;
+            }
+
+            bonusStart = bonusStart + ":00";
+            bonusEnd = bonusEnd  + ":00";
+
+            bonusTime.innerText = bonusStart + " - " + bonusEnd;
+
+            var bonusTitle = document.createElement("h4");
+            bonusTitle.innerText = bonus.title;
+
+            var bonusSubtitle = document.createElement("h6");
+            bonusSubtitle.innerText = bonus.subtitle;
+
+            bonusElem.appendChild(bonusTime);
+            bonusElem.appendChild(bonusTitle);
+            bonusElem.appendChild(bonusSubtitle);
+
+            event.appendChild(bonusElem);
+
+            event.classList.add("bonus");
+        }
 
         document.getElementById("schedule").appendChild(event);
     });

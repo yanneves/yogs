@@ -384,7 +384,8 @@
                     "subtitle": "jingle jam\ngames daily!",
                     "startHour": 11,
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/347199912?t=00h23m17s"
+                        "twitch": "https://www.twitch.tv/videos/347199912?t=00h23m17s",
+                        "youtube": "https://www.youtube.com/watch?v=tsuTZ1zqjlo"
                     }
                 },
                 {
@@ -393,7 +394,8 @@
                     "type": "pink",
                     "startHour": 14,
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/347199912?t=03h22m23s"
+                        "twitch": "https://www.twitch.tv/videos/347199912?t=03h22m23s",
+                        "youtube": "https://www.youtube.com/watch?v=lX2l5OI7fD8"
                     }
                 },
                 {
@@ -404,7 +406,8 @@
                     "type": "yellow double split",
                     "startHour": 17,
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/347199912?t=07h34m56s"
+                        "twitch": "https://www.twitch.tv/videos/347199912?t=07h34m56s",
+                        "youtube": "https://www.youtube.com/watch?v=f0LU5wyA5Qw"
                     }
                 }
             ]
@@ -417,7 +420,8 @@
                     "subtitle": "jingle jam\ngames daily!",
                     "startHour": 11,
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/347628218?t=00h10m42s"
+                        "twitch": "https://www.twitch.tv/videos/347628218?t=00h10m42s",
+                        "youtube": "https://www.youtube.com/watch?v=JJ4MHGE_1Mc"
                     }
                 },
                 {
@@ -426,7 +430,8 @@
                     "type": "dark",
                     "startHour": 14,
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/347628218?t=03h17m34s"
+                        "twitch": "https://www.twitch.tv/videos/347628218?t=03h17m34s",
+                        "youtube": "https://www.youtube.com/watch?v=t351fxJZbJI"
                     }
                 },
                 {
@@ -435,7 +440,8 @@
                     "type": "pink double",
                     "startHour": 17,
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/347628218?t=06h06m55s"
+                        "twitch": "https://www.twitch.tv/videos/347628218?t=06h06m55s",
+                        "youtube": "https://www.youtube.com/watch?v=ecnbpypvthk"
                     }
                 }
             ]
@@ -448,7 +454,8 @@
                     "type": "dark",
                     "startHour": 11,
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/348054430?t=00h39m46s"
+                        "twitch": "https://www.twitch.tv/videos/348054430?t=00h39m46s",
+                        "youtube": "https://www.youtube.com/watch?v=z-AbSkBYhkc"
                     }
                 },
                 {
@@ -457,7 +464,8 @@
                     "type": "dark",
                     "startHour": 14,
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/348054430?t=03h43m40s"
+                        "twitch": "https://www.twitch.tv/videos/348054430?t=03h43m40s",
+                        "youtube": "https://www.youtube.com/watch?v=EH-8tEQFsHU"
                     }
                 },
                 {
@@ -476,7 +484,10 @@
                 {
                     "title": "stocking\nstuffers",
                     "subtitle": "jingle jam\ngames daily!",
-                    "startHour": 11
+                    "startHour": 11,
+                    "vods": {
+                        "youtube": "https://www.youtube.com/watch?v=TSiirzyemwI"
+                    }
                 },
                 {
                     "title": "secret santa\nand cocktails",
@@ -569,7 +580,8 @@
                     "type": "pink"
                 },
                 {
-                    "title": "tba",
+                    "title": "a blobby\ngood time!",
+                    "subtitle": "radderss\nand bouphe",
                     "startHour": 20,
                     "type": "dark"
                 }
@@ -621,7 +633,13 @@
                 {
                     "title": "zoey's\nsuper long\nmega cool\ncrimbo\nstream",
                     "startHour": 17,
-                    "type": "pink double"
+                    "type": "pink double",
+                    "bonus": {
+                        "startHour": 23,
+                        "endHour": 3,
+                        "title": "heroeshype",
+                        "subtitle": "heroes of the storm"
+                    }
                 }
             ]
         },
@@ -672,7 +690,7 @@
                     "type": "pink"
                 },
                 {
-                    "title": "tba",
+                    "title": "yogscinema",
                     "startHour": 20,
                     "type": "dark"
                 }
@@ -700,7 +718,7 @@
                     "type": "yellow"
                 },
                 {
-                    "title": "tba",
+                    "title": "yogscinema",
                     "startHour": 20,
                     "type": "dark"
                 }
