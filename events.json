@@ -486,6 +486,7 @@
                     "subtitle": "jingle jam\ngames daily!",
                     "startHour": 11,
                     "vods": {
+                        "twitch": "https://www.twitch.tv/videos/348475593?t=49m53s",
                         "youtube": "https://www.youtube.com/watch?v=TSiirzyemwI"
                     }
                 },
@@ -493,17 +494,26 @@
                     "title": "secret santa\nand cocktails",
                     "subtitle": "with lewis",
                     "type": "yellow",
-                    "startHour": 14
+                    "startHour": 14,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/348475593?t=03h30m54s"
+                    }
                 },
                 {
                     "title": "christmas\nroleplaying",
                     "subtitle": "tom, lewis, \nand friends!",
                     "type": "pink",
-                    "startHour": 17
+                    "startHour": 17,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/348475593?t=07h59m11s"
+                    }
                 },
                 {
                     "title": "hat films\nrainbow\nsix: siege",
-                    "startHour": 20
+                    "startHour": 20,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/348475593?t=09h49m53s"
+                    }
                 }
             ]
         },
@@ -513,18 +523,27 @@
                 {
                     "title": "stocking\nstuffers",
                     "subtitle": "jingle jam\ngames daily!",
-                    "startHour": 11
+                    "startHour": 11,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/348890010?t=44m41s"
+                    }
                 },
                 {
                     "title": "lewis and\nhis dad",
                     "type": "dark",
-                    "startHour": 14
+                    "startHour": 14,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/348890010?t=03h34m39s"
+                    }
                 },
                 {
                     "title": "karaoke\nstream 2",
                     "subtitle": "electric\nboogaloo",
                     "type": "yellow double",
-                    "startHour": 17
+                    "startHour": 17,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/348890010?t=07h10m22s"
+                    }
                 }
             ]
         }
@@ -539,24 +558,36 @@
                 {
                     "title": "stocking\nstuffers",
                     "subtitle": "jingle jam\ngames daily!",
-                    "startHour": 11
+                    "startHour": 11,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/349353280?t=04m48s"
+                    }
                 },
                 {
                     "title": "a smashing\nchristmas\nsims",
                     "startHour": 14,
-                    "type": "pink"
+                    "type": "pink",
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/349353280?t=03h02m09s"
+                    }
                 },
                 {
                     "title": "ladies night",
                     "subtitle": "hannah and\nfriends",
                     "startHour": 17,
-                    "type": "yellow"
+                    "type": "yellow",
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/349353280?t=06h20m28s"
+                    }
                 },
                 {
                     "title": "drag up your\nlife!",
                     "subtitle": "dressing up\ncaff in drag",
                     "startHour": 20,
-                    "type": "pink"
+                    "type": "pink",
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/349353280?t=09h06m47s"
+                    }
                 }
             ]
         },
