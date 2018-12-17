@@ -505,7 +505,8 @@
                     "type": "pink",
                     "startHour": 17,
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/348475593?t=07h59m11s"
+                        "twitch": "https://www.twitch.tv/videos/348475593?t=07h59m11s",
+                        "youtube": "https://www.youtube.com/watch?v=WHZ4j_I3cLo"
                     }
                 },
                 {
