@@ -378,6 +378,7 @@
         },
         "mon": {
             "date": 10,
+            "madcat": "https://www.youtube.com/watch?v=12VXXg0Hkx0",
             "events": [
                 {
                     "title": "stocking\nstuffers",
@@ -414,6 +415,7 @@
         },
         "tue": {
             "date": 11,
+            "madcat": "https://www.youtube.com/watch?v=1-_C3f3lfWY",
             "events": [
                 {
                     "title": "stocking\nstuffers",
@@ -448,6 +450,7 @@
         },
         "wed": {
             "date": 12,
+            "madcat": "https://www.youtube.com/watch?v=35RS1jklh8A",
             "events": [
                 {
                     "title": "isorrow\nmario party",
@@ -480,6 +483,7 @@
         },
         "thur": {
             "date": 13,
+            "madcat": "https://www.youtube.com/watch?v=GGih-0E89uw",
             "events": [
                 {
                     "title": "stocking\nstuffers",
@@ -520,6 +524,7 @@
         },
         "fri": {
             "date": 14,
+            "madcat": "https://www.youtube.com/watch?v=ojsRyFSKDSM",
             "events": [
                 {
                     "title": "stocking\nstuffers",
@@ -555,6 +560,7 @@
         },
         "sat": {
             "date": 15,
+            "madcat": "https://www.youtube.com/watch?v=F6VRRYXA0Ic",
             "events": [
                 {
                     "title": "stocking\nstuffers",
