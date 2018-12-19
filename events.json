@@ -500,7 +500,8 @@
                     "type": "yellow",
                     "startHour": 14,
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/348475593?t=03h30m54s"
+                        "twitch": "https://www.twitch.tv/videos/348475593?t=03h30m54s",
+                        "youtube": "https://www.youtube.com/watch?v=k-QnCeuiwlI"
                     }
                 },
                 {
@@ -517,7 +518,8 @@
                     "title": "hat films\nrainbow\nsix: siege",
                     "startHour": 20,
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/348475593?t=09h49m53s"
+                        "twitch": "https://www.twitch.tv/videos/348475593?t=09h49m53s",
+                        "youtube": "https://www.youtube.com/watch?v=eOqBKaHIUdM"
                     }
                 }
             ]
@@ -531,7 +533,8 @@
                     "subtitle": "jingle jam\ngames daily!",
                     "startHour": 11,
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/348890010?t=44m41s"
+                        "twitch": "https://www.twitch.tv/videos/348890010?t=44m41s",
+                        "youtube": "https://www.youtube.com/watch?v=ZBM5FNyvpg4"
                     }
                 },
                 {
@@ -539,7 +542,8 @@
                     "type": "dark",
                     "startHour": 14,
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/348890010?t=03h34m39s"
+                        "twitch": "https://www.twitch.tv/videos/348890010?t=03h34m39s",
+                        "youtube": "https://www.youtube.com/watch?v=TfurKQkvIIo"
                     }
                 },
                 {
@@ -567,7 +571,8 @@
                     "subtitle": "jingle jam\ngames daily!",
                     "startHour": 11,
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/349353280?t=04m48s"
+                        "twitch": "https://www.twitch.tv/videos/349353280?t=04m48s",
+                        "youtube": "https://www.youtube.com/watch?v=oGomHA5ZcHQ"
                     }
                 },
                 {
@@ -575,7 +580,8 @@
                     "startHour": 14,
                     "type": "pink",
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/349353280?t=03h02m09s"
+                        "twitch": "https://www.twitch.tv/videos/349353280?t=03h02m09s",
+                        "youtube": "https://www.youtube.com/watch?v=MgCy062XKtI"
                     }
                 },
                 {
@@ -584,7 +590,8 @@
                     "startHour": 17,
                     "type": "yellow",
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/349353280?t=06h20m28s"
+                        "twitch": "https://www.twitch.tv/videos/349353280?t=06h20m28s",
+                        "youtube": "https://www.youtube.com/watch?v=3tBnRsx7gC0"
                     }
                 },
                 {
@@ -593,7 +600,8 @@
                     "startHour": 20,
                     "type": "pink",
                     "vods": {
-                        "twitch": "https://www.twitch.tv/videos/349353280?t=09h06m47s"
+                        "twitch": "https://www.twitch.tv/videos/349353280?t=09h06m47s",
+                        "youtube": "https://www.youtube.com/watch?v=5MReuL1qTIQ"
                     }
                 }
             ]
@@ -604,24 +612,36 @@
                 {
                     "title": "stocking\nstuffers",
                     "subtitle": "jingle jam\ngames daily!",
-                    "startHour": 11
+                    "startHour": 11,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/349841283?t=00h05m36s"
+                    }
                 },
                 {
                     "title": "paintlicking\nparty",
                     "subtitle": "lewis, ben,\ntom, and alex",
                     "startHour": 14,
-                    "type": "dark"
+                    "type": "dark",
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/349841283?t=03h16m15s"
+                    }
                 },
                 {
                     "title": "highrollers\nfamily\nboardgames",
                     "startHour": 17,
-                    "type": "pink"
+                    "type": "pink",
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/349841283?t=06h13m52s"
+                    }
                 },
                 {
                     "title": "a blobby\ngood time!",
                     "subtitle": "radderss\nand bouphe",
                     "startHour": 20,
-                    "type": "dark"
+                    "type": "dark",
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/349841283?t=09h16m13s"
+                    }
                 }
             ]
         },
@@ -638,6 +658,7 @@
                     "subtitle": "sjin, pedguin,\nchippy and\npython",
                     "startHour": 14,
                     "type": "pink"
+                    
                 },
                 {
                     "title": "simon\nand lewis",
@@ -660,18 +681,27 @@
                 {
                     "title": "stocking\nstuffers",
                     "subtitle": "jingle jam\ngames daily!",
-                    "startHour": 11
+                    "startHour": 11,
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/350758389?t=00h41m00s"
+                    }
                 },
                 {
                     "title": "fortnite",
                     "subtitle": "inthelittlewood\nand pedguin",
                     "startHour": 14,
-                    "type": "dark"
+                    "type": "dark",
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/350758389?t=03h47m20s"
+                    }
                 },
                 {
                     "title": "zoey's\nsuper long\nmega cool\ncrimbo\nstream",
                     "startHour": 17,
                     "type": "pink double",
+                    "vods": {
+                        "twitch": "https://www.twitch.tv/videos/350863417?t=00h06m40s"
+                    },
                     "bonus": {
                         "startHour": 23,
                         "endHour": 3,
