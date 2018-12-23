@@ -795,28 +795,109 @@
     },
     "week4": {
         "meta": {
-            "active": false
+            "active": true
         },
         "sat": {
-
+            "date": 22,
+            "events": [
+                {
+                    "title": "stocking\nstuffers",
+                    "subtitle": "jingle jam\ngames daily!",
+                    "startHour": 11
+                },
+                {
+                    "title": "Switch it Up",
+                    "subtitle": "Switch games in house!",
+                    "startHour": 14,
+                    "type": "dark"
+                },
+                {
+                    "title": "Sex and Science",
+                    "subtitle": "Lewis, Turps\nSimon Clark\n&amp; Hannah Witton",
+                    "startHour": 17,
+                    "type": "yellow"
+                },
+                {
+                    "title": "Rythian or Nilesy\nIt's Unconfirmed",
+                    "startHour": 20,
+                    "type": "compact muted",
+                    "bonus": {
+                        "startHour": 23,
+                        "endHour": 3,
+                        "title": "Smash Bros\nMoney Matches!",
+                        "subtitle": "with Team Wheat"
+                    }
+                }
+            ]
         },
         "sun": {
-            
+            "date": 23,
+            "events": [
+                {
+                    "title": "stocking\nstuffers XL",
+                    "subtitle": "jingle jam\ngames daily!",
+                    "startHour": 11,
+                    "type": "double"
+                },
+                {
+                    "title": "Turps Big Fat\nQuiz of the Year!",
+                    "startHour": 17,
+                    "type": "pink"
+                },
+                {
+                    "title": "Hafu and\nSjin",
+                    "subtitle": "Hearthstone",
+                    "startHour": 20,
+                    "type": "yellow"
+                }
+            ]
         },
         "mon": {
-
+            "date": 24,
+            "events": [
+                {
+                    "title": "stocking\nstuffers",
+                    "subtitle": "jingle jam\ngames daily!",
+                    "startHour": 11
+                },
+                {
+                    "title": "Turps and\nLewis Build\nChristmas\nPresents!",
+                    "startHour": 14,
+                    "type": "dark"
+                },
+                {
+                    "title": "Sjins Birthday\nCocktail Party",
+                    "startHour": 17,
+                    "type": "yellow"
+                },
+                {
+                    "title": "Yogcinema",
+                    "startHour": 20,
+                    "type": "dark"
+                }
+            ]
         },
         "tue": {
-            
+            "date": 25,
+            "events": [
+                {
+                    "title": "Merry\nChristmas!\n\nYogscast\nre-runs\nall day",
+                    "startHour": 11,
+                    "type": "quadruple"
+                }
+            ]
         },
         "wed": {
-
+            "date": 26,
+            "events": []
         },
         "thur": {
-
+            "date": 27,
+            "events": []
         },
         "fri": {
-            
+            "date": 28,
+            "events": []
         }
     },
     "week5": {

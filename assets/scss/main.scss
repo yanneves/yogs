@@ -317,9 +317,29 @@ body {
             &.dark {
                 background: #0c1d44;
             }
+            &.muted {
+                .center {
+                    color: rgba(255,255,255,0.25);
+                }
+            }
+            &.compact {
+                .center, .bonus {
+                    h1, h2, h3, h4, h5 {
+                        font-size: 0.75rem;
+                    }
+                    h6 {
+                        font-size:0.5rem;
+                    }
+                }
+            }
             &.bonus {
                 .center {
                     transform: translate(0, -70%);
+                }
+                &.compact {
+                    .center {
+                        transform: translate(0, -180%);
+                    }
                 }
             }
         }
@@ -337,6 +357,9 @@ body {
         }
         .double {
             grid-row-end: span 2;
+        }
+        .quadruple {
+            grid-row-end: span 4;
         }
     }
 }
